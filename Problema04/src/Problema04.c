@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdio_ext.h>
 
 #define FALSE 0
 #define TRUE 1
