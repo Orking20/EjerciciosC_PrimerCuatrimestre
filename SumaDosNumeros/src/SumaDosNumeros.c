@@ -13,8 +13,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	int numero1;
 	int numero2;
 	int resultado;

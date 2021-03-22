@@ -1,15 +1,174 @@
-13:04:38 **** Build of configuration Debug for project CicloPositivoNegativo ****
+14:36:38 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
 make all 
-Building file: ../src/CicloPositivoNegativo.c
+Building file: ../src/CalculadoraSimple.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CicloPositivoNegativo.d" -MT"src/CicloPositivoNegativo.o" -o "src/CicloPositivoNegativo.o" "../src/CicloPositivoNegativo.c"
-Finished building: ../src/CicloPositivoNegativo.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+../src/CalculadoraSimple.c: In function ‘main’:
+../src/CalculadoraSimple.c:23:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("%d", sizeof(a));
+          ~^   ~~~~~~~~~
+          %ld
+../src/CalculadoraSimple.c:21:6: warning: unused variable ‘c’ [-Wunused-variable]
+  int c;
+      ^
+../src/CalculadoraSimple.c:20:6: warning: unused variable ‘b’ [-Wunused-variable]
+  int b;
+      ^
+Finished building: ../src/CalculadoraSimple.c
  
-Building target: CicloPositivoNegativo
+Building target: CalculadoraSimple
 Invoking: GCC C Linker
-gcc  -o "CicloPositivoNegativo"  ./src/CicloPositivoNegativo.o   
-Finished building target: CicloPositivoNegativo
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
  
-13:04:42 **** Incremental Build of configuration Debug for project CicloPositivoNegativo ****
+14:36:43 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+make: No se hace nada para 'all'.
+14:37:57 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+Building file: ../src/CalculadoraSimple.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+../src/CalculadoraSimple.c: In function ‘main’:
+../src/CalculadoraSimple.c:23:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("%d", sizeof(a));
+          ~^   ~~~~~~~~~
+          %ld
+../src/CalculadoraSimple.c:24:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("%d", sizeof(b));
+          ~^   ~~~~~~~~~
+          %ld
+../src/CalculadoraSimple.c:25:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("%d", sizeof(c));
+          ~^   ~~~~~~~~~
+          %ld
+Finished building: ../src/CalculadoraSimple.c
+ 
+Building target: CalculadoraSimple
+Invoking: GCC C Linker
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
+ 
+14:37:58 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+make: No se hace nada para 'all'.
+14:39:28 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+Building file: ../src/CalculadoraSimple.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+../src/CalculadoraSimple.c: In function ‘main’:
+../src/CalculadoraSimple.c:23:35: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  printf("Dirección de variable: %d\n", &a);
+                                  ~^     ~~
+                                  %ls
+../src/CalculadoraSimple.c:24:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("%d", sizeof(b));
+          ~^   ~~~~~~~~~
+          %ld
+../src/CalculadoraSimple.c:25:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("%d", sizeof(c));
+          ~^   ~~~~~~~~~
+          %ld
+Finished building: ../src/CalculadoraSimple.c
+ 
+Building target: CalculadoraSimple
+Invoking: GCC C Linker
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
+ 
+14:39:29 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+make: No se hace nada para 'all'.
+14:41:13 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+Building file: ../src/CalculadoraSimple.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+../src/CalculadoraSimple.c: In function ‘main’:
+../src/CalculadoraSimple.c:23:40: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  printf("Dirección de la variable a: %d\n", &a);
+                                       ~^     ~~
+                                       %ls
+../src/CalculadoraSimple.c:24:40: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  printf("Dirección de la variable b: %d\n", &b);
+                                       ~^     ~~
+                                       %ls
+../src/CalculadoraSimple.c:25:40: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  printf("Dirección de la variable c: %d\n", &c);
+                                       ~^     ~~
+                                       %ls
+Finished building: ../src/CalculadoraSimple.c
+ 
+Building target: CalculadoraSimple
+Invoking: GCC C Linker
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
+ 
+14:41:14 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+make: No se hace nada para 'all'.
+14:42:28 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+Building file: ../src/CalculadoraSimple.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+Finished building: ../src/CalculadoraSimple.c
+ 
+Building target: CalculadoraSimple
+Invoking: GCC C Linker
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
+ 
+14:42:29 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+make: No se hace nada para 'all'.
+14:43:07 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+Building file: ../src/CalculadoraSimple.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+../src/CalculadoraSimple.c: In function ‘main’:
+../src/CalculadoraSimple.c:23:40: warning: unknown conversion type character ‘b’ in format [-Wformat=]
+  printf("Dirección de la variable a: %b\n", &a);
+                                        ^
+../src/CalculadoraSimple.c:23:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("Dirección de la variable a: %b\n", &a);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/CalculadoraSimple.c:24:40: warning: unknown conversion type character ‘b’ in format [-Wformat=]
+  printf("Dirección de la variable b: %b\n", &b);
+                                        ^
+../src/CalculadoraSimple.c:24:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("Dirección de la variable b: %b\n", &b);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/CalculadoraSimple.c:25:40: warning: unknown conversion type character ‘b’ in format [-Wformat=]
+  printf("Dirección de la variable c: %b\n", &c);
+                                        ^
+../src/CalculadoraSimple.c:25:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("Dirección de la variable c: %b\n", &c);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/CalculadoraSimple.c
+ 
+Building target: CalculadoraSimple
+Invoking: GCC C Linker
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
+ 
+14:43:08 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+make: No se hace nada para 'all'.
+14:43:26 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
+make all 
+Building file: ../src/CalculadoraSimple.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
+Finished building: ../src/CalculadoraSimple.c
+ 
+Building target: CalculadoraSimple
+Invoking: GCC C Linker
+gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
+Finished building target: CalculadoraSimple
+ 
+14:43:26 **** Incremental Build of configuration Debug for project CalculadoraSimple ****
 make all 
 make: No se hace nada para 'all'.

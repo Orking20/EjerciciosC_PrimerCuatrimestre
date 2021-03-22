@@ -17,8 +17,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	int numeroIngresado;
 	int contadorPares;
 	int contadorImpares;

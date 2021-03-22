@@ -16,8 +16,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	int numeroIngresado;
 	int minimo;
 	int maximo;

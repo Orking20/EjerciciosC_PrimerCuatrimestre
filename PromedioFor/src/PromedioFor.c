@@ -13,8 +13,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	int numeroIngresado;
 	int acumulador = 0;
 	int contador = 0;

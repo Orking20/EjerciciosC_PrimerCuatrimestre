@@ -27,8 +27,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	long legajo;
 	char cursada;
 	int cantMaterias;
@@ -69,62 +67,62 @@ int main(void)
 	do
 	{
 		printf("Legajo (DNI): ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%ld", &legajo);
 		while(legajo < 0)
 		{
 			printf("Error. Legajo (DNI): ");
-			fflush(stdin);
+			__fpurge(stdin);
 			scanf("%ld", &legajo);
 		}
 
 		printf("Tipo de cursada (L: Libre - P: Presencial - R: Remota): ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%c", &cursada);
 		while(cursada != 'L' && cursada != 'P' && cursada != 'R')
 		{
 			printf("Error. Tipo de cursada (L: Libre - P: Presencial - R: Remota): ");
-			fflush(stdin);
+			__fpurge(stdin);
 			scanf("%c", &cursada);
 		}
 
 		printf("Cantidad de materias (entre 1 y 7): ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%d", &cantMaterias);
 		while(cantMaterias < 1 || cantMaterias > 7)
 		{
 			printf("Error. Cantidad de materias (entre 1 y 7): ");
-			fflush(stdin);
+			__fpurge(stdin);
 			scanf("%d", &cantMaterias);
 		}
 
 		printf("Sexo (M: Masculino - F: Femenino): ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%c", &sexo);
 		while(sexo != 'M' && sexo != 'F')
 		{
 			printf("Error. Sexo (M: Masculino - F: Femenino): : ");
-			fflush(stdin);
+			__fpurge(stdin);
 			scanf("%c", &sexo);
 		}
 
 		printf("Nota promedio (entre 0 y 10): ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%d", &notaPromedio);
 		while(notaPromedio < 0 || notaPromedio > 10)
 		{
 			printf("Error. Nota promedio (entre 0 y 10): ");
-			fflush(stdin);
+			__fpurge(stdin);
 			scanf("%d", &notaPromedio);
 		}
 
 		printf("Edad: ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%d", &edad);
 		while(edad < 0)
 		{
 			printf("Error. Edad: ");
-			fflush(stdin);
+			__fpurge(stdin);
 			scanf("%d", &edad);
 		}
 
@@ -170,7 +168,7 @@ int main(void)
 		}
 
 		printf("¿Desea continuar? (s/n): \n");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%c", &continuar);
 	}while(continuar == 's');
 

@@ -15,8 +15,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	int numeroIngresados;
 	char continuar;
 	int sumaPositivos;
@@ -48,7 +46,7 @@ int main(void)
 		}
 
 		printf("¿Desea continuar ingrsando números (s/n)? ");
-		fflush(stdin);
+		__fpurge(stdin);
 		scanf("%c", &continuar);
 	}while(continuar == 's');
 

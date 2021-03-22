@@ -17,8 +17,6 @@
 
 int main(void)
 {
-	setbuf(stdout, NULL);
-
 	int numeroIngresado;
 	int positivos = 0;
 	int negativos = 0;

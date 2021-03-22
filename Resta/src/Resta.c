@@ -13,8 +13,6 @@
 
 int main(int argc, char *argv[])
 {
-	setbuf(stdout, NULL);
-
 	int a;
 	int b;
 	int resultado;

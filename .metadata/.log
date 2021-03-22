@@ -281,3 +281,6 @@ java.io.FileNotFoundException: /home/mateo/UTN/ProgramacionLaboratorio/Ejercicio
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-03-22 13:12:24.843
 !MESSAGE Indexed 'SumaDosNumeros' (1 sources, 50 headers) in 0,046 sec: 959 declarations; 1.785 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-22 14:21:46.294
+!MESSAGE Indexed 'CalculadoraSimple' (1 sources, 50 headers) in 0,051 sec: 959 declarations; 1.785 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
