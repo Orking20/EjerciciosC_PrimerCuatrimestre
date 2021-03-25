@@ -1,12 +1,62 @@
-01:39:13 **** Build of configuration Debug for project CalculadoraSimple ****
+17:04:44 **** Build of configuration Debug for project Vocales ****
 make all 
-Building file: ../src/CalculadoraSimple.c
+Building file: ../src/Vocales.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CalculadoraSimple.d" -MT"src/CalculadoraSimple.o" -o "src/CalculadoraSimple.o" "../src/CalculadoraSimple.c"
-Finished building: ../src/CalculadoraSimple.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
+../src/Vocales.c: In function ‘main’:
+../src/Vocales.c:23:3: warning: implicit declaration of function ‘__fpurge’ [-Wimplicit-function-declaration]
+   __fpurge(stdin);
+   ^~~~~~~~
+Finished building: ../src/Vocales.c
  
-Building target: CalculadoraSimple
+Building target: Vocales
 Invoking: GCC C Linker
-gcc  -o "CalculadoraSimple"  ./src/CalculadoraSimple.o   
-Finished building target: CalculadoraSimple
+gcc  -o "Vocales"  ./src/Vocales.o   
+Finished building target: Vocales
  
+17:04:47 **** Incremental Build of configuration Debug for project Vocales ****
+make all 
+make: No se hace nada para 'all'.
+17:05:24 **** Incremental Build of configuration Debug for project Vocales ****
+make all 
+Building file: ../src/Vocales.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
+Finished building: ../src/Vocales.c
+ 
+Building target: Vocales
+Invoking: GCC C Linker
+gcc  -o "Vocales"  ./src/Vocales.o   
+Finished building target: Vocales
+ 
+17:07:14 **** Incremental Build of configuration Debug for project Vocales ****
+make all 
+Building file: ../src/Vocales.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
+../src/Vocales.c: In function ‘main’:
+../src/Vocales.c:36:25: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+  printf("Se ingresaron %d vocales en total");
+                        ~^
+Finished building: ../src/Vocales.c
+ 
+Building target: Vocales
+Invoking: GCC C Linker
+gcc  -o "Vocales"  ./src/Vocales.o   
+Finished building target: Vocales
+ 
+17:07:27 **** Incremental Build of configuration Debug for project Vocales ****
+make all 
+Building file: ../src/Vocales.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
+Finished building: ../src/Vocales.c
+ 
+Building target: Vocales
+Invoking: GCC C Linker
+gcc  -o "Vocales"  ./src/Vocales.o   
+Finished building target: Vocales
+ 
+17:07:29 **** Incremental Build of configuration Debug for project Vocales ****
+make all 
+make: No se hace nada para 'all'.
