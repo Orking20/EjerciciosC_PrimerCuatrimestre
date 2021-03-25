@@ -15,110 +15,98 @@
 #include <stdlib.h>
 #include <stdio_ext.h>
 
-int sumar(int a, int b);
-int restar(int a, int b);
-int multiplicar(int a, int b);
-float dividir(int a, int b, float* resultadoFinal);
+float sumar(float numeroA, float numeroB, float* resultado);
+float restar(float numeroA, float numeroB, float* resultado);
+float multiplicar(float numeroA, float numeroB, float* resultado);
+float dividir(float numeroA, float numeroB, float* punteroResultado);
 
 int main(void)
 {
-	int numero1;
-	int numero2;
+	float numeroA;
+	float numeroB;
 	char operador;
-	float resultadoFinal;
-	int errorDivCero;
+	float resultado;
+	float respuestaFuncion;
 
-	printf("Ingrese un número: \n");
-	scanf("%d", &numero1);
-	printf("Ingrese un operador (+ - * /): \n");
-	__fpurge(stdin);
-	scanf("%c", &operador);
-	printf("Ingrese otro número: \n");
-	scanf("%d", &numero2);
+	printf("\nIngrese un número: ");
+	//__fpurge(stdin);
+	scanf("%f", &numeroA);
+
+	do
+	{
+		printf("\nIngrese el operador (+ - * /): ");
+		__fpurge(stdin);
+		scanf("%c", &operador);
+	}while(operador != '+' && operador != '-' && operador != '*' && operador != '/');
+
+	printf("\nIngrese otro número: ");
+	//__fpurge(stdin);
+	scanf("%f", &numeroB);
 
 	switch(operador)
 	{
 		case '+':
 		{
-			resultadoFinal = sumar(numero1, numero2);
-			printf("El resultado es: %0.2f", resultadoFinal);
+			respuestaFuncion = sumar(numeroA, numeroB, &resultado);
 			break;
 		}
 		case '-':
 		{
-			resultadoFinal = restar(numero1, numero2);
-			printf("El resultado es: %0.2f", resultadoFinal);
+			respuestaFuncion = restar(numeroA, numeroB, &resultado);
 			break;
 		}
 		case '*':
 		{
-			resultadoFinal = multiplicar(numero1, numero2);
-			printf("El resultado es: %0.2f", resultadoFinal);
+			respuestaFuncion = multiplicar(numeroA, numeroB, &resultado);
 			break;
 		}
 		case '/':
 		{
-			errorDivCero = dividir(numero1, numero2, &resultadoFinal);
-			printf("%d", errorDivCero);
-
-			if(errorDivCero == 1)
-			{
-				printf("Error. No se puede dividir por cero.\n");
-			}
-			else
-			{
-				printf("El resultado es: %0.2f", resultadoFinal);
-			}
-
+			respuestaFuncion = dividir(numeroA, numeroB, &resultado);
 			break;
 		}
+	}
+
+	if(respuestaFuncion == 0)
+	{
+		printf("La respuesta es: %0.2f", resultado);
+	}
+	else
+	{
+		printf("Error. No se puede dividir por cero");
 	}
 
 	return EXIT_SUCCESS;
 }
 
-int sumar(int a, int b)
+float sumar(float numeroA, float numeroB, float* punteroResultado)
 {
-	int resultado;
-
-	resultado = a + b;
-
-	return resultado;
+	*punteroResultado = numeroA + numeroB;
+	return 0;
 }
 
-int restar(int a, int b)
+float restar(float numeroA, float numeroB, float* punteroResultado)
 {
-	int resultado;
-
-	resultado = a - b;
-
-	return resultado;
+	*punteroResultado = numeroA - numeroB;
+	return 0;
 }
 
-int multiplicar(int a, int b)
+float multiplicar(float numeroA, float numeroB, float* punteroResultado)
 {
-	int resultado;
-
-	resultado = a * b;
-
-	return resultado;
+	*punteroResultado = numeroA * numeroB;
+	return 0;
 }
 
-float dividir(int a, int b, float* direccionResultadoFinal)
+float dividir(float numeroA, float numeroB, float* punteroResultado)
 {
-	float resultado;
-	int huboError;
-
-	if(b != 0)
+	if(numeroB == 0)
 	{
-		resultado = (float)a / b;
-		*direccionResultadoFinal = resultado;
-		huboError = 0;
+		return -1;
 	}
 	else
 	{
-		huboError = 1;
+		*punteroResultado = (float)numeroA / numeroB;
+		return 0;
 	}
-
-	return huboError;
 }
+
