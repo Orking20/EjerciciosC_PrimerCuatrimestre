@@ -1,62 +1,36 @@
-17:04:44 **** Build of configuration Debug for project Vocales ****
+18:03:41 **** Build of configuration Debug for project If3 ****
 make all 
-Building file: ../src/Vocales.c
+Building file: ../src/If3.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
-../src/Vocales.c: In function ‘main’:
-../src/Vocales.c:23:3: warning: implicit declaration of function ‘__fpurge’ [-Wimplicit-function-declaration]
-   __fpurge(stdin);
-   ^~~~~~~~
-Finished building: ../src/Vocales.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/If3.d" -MT"src/If3.o" -o "src/If3.o" "../src/If3.c"
+Finished building: ../src/If3.c
  
-Building target: Vocales
+Building target: If3
 Invoking: GCC C Linker
-gcc  -o "Vocales"  ./src/Vocales.o   
-Finished building target: Vocales
+gcc  -o "If3"  ./src/If3.o   
+Finished building target: If3
  
-17:04:47 **** Incremental Build of configuration Debug for project Vocales ****
+18:03:44 **** Incremental Build of configuration Debug for project If3 ****
 make all 
 make: No se hace nada para 'all'.
-17:05:24 **** Incremental Build of configuration Debug for project Vocales ****
+18:04:16 **** Incremental Build of configuration Debug for project If3 ****
 make all 
-Building file: ../src/Vocales.c
+Building file: ../src/If3.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
-Finished building: ../src/Vocales.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/If3.d" -MT"src/If3.o" -o "src/If3.o" "../src/If3.c"
+Finished building: ../src/If3.c
  
-Building target: Vocales
+Building target: If3
 Invoking: GCC C Linker
-gcc  -o "Vocales"  ./src/Vocales.o   
-Finished building target: Vocales
+gcc  -o "If3"  ./src/If3.o   
+Finished building target: If3
  
-17:07:14 **** Incremental Build of configuration Debug for project Vocales ****
+18:04:17 **** Incremental Build of configuration Debug for project If3 ****
 make all 
-Building file: ../src/Vocales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
-../src/Vocales.c: In function ‘main’:
-../src/Vocales.c:36:25: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
-  printf("Se ingresaron %d vocales en total");
-                        ~^
-Finished building: ../src/Vocales.c
- 
-Building target: Vocales
-Invoking: GCC C Linker
-gcc  -o "Vocales"  ./src/Vocales.o   
-Finished building target: Vocales
- 
-17:07:27 **** Incremental Build of configuration Debug for project Vocales ****
+make: No se hace nada para 'all'.
+18:04:22 **** Incremental Build of configuration Debug for project If3 ****
 make all 
-Building file: ../src/Vocales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Vocales.d" -MT"src/Vocales.o" -o "src/Vocales.o" "../src/Vocales.c"
-Finished building: ../src/Vocales.c
- 
-Building target: Vocales
-Invoking: GCC C Linker
-gcc  -o "Vocales"  ./src/Vocales.o   
-Finished building target: Vocales
- 
-17:07:29 **** Incremental Build of configuration Debug for project Vocales ****
+make: No se hace nada para 'all'.
+18:04:26 **** Incremental Build of configuration Debug for project If3 ****
 make all 
 make: No se hace nada para 'all'.

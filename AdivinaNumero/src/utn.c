@@ -11,31 +11,22 @@
 
 int getInt(int* pNumero)
 {
-	int numero;
-
-	scanf("%d", &numero);
-	*pNumero = numero;
+	scanf("%d", pNumero);
 
 	return 0;
 }
 
 float getFloat(float* pNumero)
 {
-	float numero;
-
-	scanf("%f", &numero);
-	*pNumero = numero;
+	scanf("%f", pNumero);
 
 	return 0;
 }
 
 char getChar(char* pCaracter)
 {
-	char caracter;
-
 	__fpurge(stdin);
-	scanf("%c", &caracter);
-	*pCaracter = caracter;
+	scanf("%c", pCaracter);
 
 	return 0;
 }
