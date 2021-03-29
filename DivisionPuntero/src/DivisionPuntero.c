@@ -55,7 +55,7 @@ float dividir(float dividendo, float divisor, float* punteroResultado)
 	}
 	else
 	{
-		*punteroResultado = dividendo / divisor;
+		*punteroResultado = (float)dividendo / divisor;
 		return 0;
 	}
 }

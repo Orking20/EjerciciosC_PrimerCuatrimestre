@@ -1,36 +1,1077 @@
-18:03:41 **** Build of configuration Debug for project If3 ****
+00:19:45 **** Incremental Build of configuration Debug for project Arrays4 ****
 make all 
-Building file: ../src/If3.c
+Building file: ../src/Arrays4.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/If3.d" -MT"src/If3.o" -o "src/If3.o" "../src/If3.c"
-Finished building: ../src/If3.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
  
-Building target: If3
+Building target: Arrays4
 Invoking: GCC C Linker
-gcc  -o "If3"  ./src/If3.o   
-Finished building target: If3
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
  
-18:03:44 **** Incremental Build of configuration Debug for project If3 ****
+00:19:48 **** Incremental Build of configuration Debug for project Arrays4 ****
 make all 
 make: No se hace nada para 'all'.
-18:04:16 **** Incremental Build of configuration Debug for project If3 ****
+00:22:21 **** Incremental Build of configuration Debug for project Arrays4 ****
 make all 
-Building file: ../src/If3.c
+Building file: ../src/Arrays4.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/If3.d" -MT"src/If3.o" -o "src/If3.o" "../src/If3.c"
-Finished building: ../src/If3.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
  
-Building target: If3
+Building target: Arrays4
 Invoking: GCC C Linker
-gcc  -o "If3"  ./src/If3.o   
-Finished building target: If3
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
  
-18:04:17 **** Incremental Build of configuration Debug for project If3 ****
+00:22:22 **** Incremental Build of configuration Debug for project Arrays4 ****
 make all 
 make: No se hace nada para 'all'.
-18:04:22 **** Incremental Build of configuration Debug for project If3 ****
+00:26:22 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:46:11: warning: passing argument 1 of ‘system’ from incompatible pointer type [-Wincompatible-pointer-types]
+    system(exit);
+           ^~~~
+In file included from ../src/Arrays4.c:15:
+/usr/include/stdlib.h:781:32: note: expected ‘const char *’ but argument is of type ‘__attribute__((noreturn)) void (*)(int)’
+ extern int system (const char *__command) __wur;
+                    ~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:26:46 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:46:11: warning: passing argument 1 of ‘system’ from incompatible pointer type [-Wincompatible-pointer-types]
+    system(exit, NULL);
+           ^~~~
+In file included from ../src/Arrays4.c:15:
+/usr/include/stdlib.h:781:32: note: expected ‘const char *’ but argument is of type ‘__attribute__((noreturn)) void (*)(int)’
+ extern int system (const char *__command) __wur;
+                    ~~~~~~~~~~~~^~~~~~~~~
+../src/Arrays4.c:46:4: error: too many arguments to function ‘system’
+    system(exit, NULL);
+    ^~~~~~
+In file included from ../src/Arrays4.c:15:
+/usr/include/stdlib.h:781:12: note: declared here
+ extern int system (const char *__command) __wur;
+            ^~~~~~
+make: *** [src/subdir.mk:20: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:26:51 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:46:11: warning: passing argument 1 of ‘system’ from incompatible pointer type [-Wincompatible-pointer-types]
+    system(exit);
+           ^~~~
+In file included from ../src/Arrays4.c:15:
+/usr/include/stdlib.h:781:32: note: expected ‘const char *’ but argument is of type ‘__attribute__((noreturn)) void (*)(int)’
+ extern int system (const char *__command) __wur;
+                    ~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:26:52 **** Incremental Build of configuration Debug for project Arrays4 ****
 make all 
 make: No se hace nada para 'all'.
-18:04:26 **** Incremental Build of configuration Debug for project If3 ****
+00:28:43 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:28:43 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:28:56 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:34:12 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘numeroMaxArray’:
+../src/Arrays4.c:61:21: error: subscripted value is neither array nor pointer nor vector
+   if(i == 0 || array[i] > array[i - 1])
+                     ^
+../src/Arrays4.c:61:32: error: subscripted value is neither array nor pointer nor vector
+   if(i == 0 || array[i] > array[i - 1])
+                                ^
+../src/Arrays4.c:63:9: error: subscripted value is neither array nor pointer nor vector
+    array[i] = array[i - 1];
+         ^
+../src/Arrays4.c:63:20: error: subscripted value is neither array nor pointer nor vector
+    array[i] = array[i - 1];
+                    ^
+make: *** [src/subdir.mk:20: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:34:41 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c:55:5: error: conflicting types for ‘numeroMaxArray’
+ int numeroMaxArray(int array[])
+     ^~~~~~~~~~~~~~
+../src/Arrays4.c:48:8: note: previous declaration of ‘numeroMaxArray’ was here
+    int numeroMaxArray(int array);
+        ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:20: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:34:49 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:48:8: error: conflicting types for ‘numeroMaxArray’
+    int numeroMaxArray(int array);
+        ^~~~~~~~~~~~~~
+../src/Arrays4.c:20:5: note: previous declaration of ‘numeroMaxArray’ was here
+ int numeroMaxArray(int array[]);
+     ^~~~~~~~~~~~~~
+../src/Arrays4.c: At top level:
+../src/Arrays4.c:55:5: error: conflicting types for ‘numeroMaxArray’
+ int numeroMaxArray(int array[])
+     ^~~~~~~~~~~~~~
+../src/Arrays4.c:48:8: note: previous declaration of ‘numeroMaxArray’ was here
+    int numeroMaxArray(int array);
+        ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:20: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:36:03 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:48:4: warning: parameter names (without types) in function declaration
+    int numeroMaxArray(array);
+    ^~~
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:36:19 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:48:23: error: expected declaration specifiers or ‘...’ before ‘array’
+    int numeroMaxArray(array[]);
+                       ^~~~~
+make: *** [src/subdir.mk:20: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:36:50 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:36:51 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:37:24 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:37:24 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:38:27 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:38:28 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:40:36 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:40:37 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:42:59 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:49:4: error: too many arguments to function ‘numeroMaxArray’
+    numeroMaxArray(array, &mayor);
+    ^~~~~~~~~~~~~~
+../src/Arrays4.c:20:5: note: declared here
+ int numeroMaxArray(int array[]);
+     ^~~~~~~~~~~~~~
+../src/Arrays4.c: At top level:
+../src/Arrays4.c:60:5: error: conflicting types for ‘numeroMaxArray’
+ int numeroMaxArray(int array[], int* mayor)
+     ^~~~~~~~~~~~~~
+../src/Arrays4.c:20:5: note: previous declaration of ‘numeroMaxArray’ was here
+ int numeroMaxArray(int array[]);
+     ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:20: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:43:33 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:43:34 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:43:56 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:43:57 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:44:06 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:44:44 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:44:45 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:44:46 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:44:57 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:44:58 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:45:20 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o   
+Finished building target: Arrays4
+ 
+00:45:21 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:52:39 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+In file included from ../src/Arrays4.c:17:
+../src/arrayBiblioteca.h:4:33: error: unknown type name ‘tamanoArray’
+ int numeroMaxArray(int array[], tamanoArray, int* mayor);
+                                 ^~~~~~~~~~~
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:49:4: warning: implicit declaration of function ‘numeroMaxArray’; did you mean ‘numeroMinArray’? [-Wimplicit-function-declaration]
+    numeroMaxArray(array, ARRAY_LEN, &mayor);
+    ^~~~~~~~~~~~~~
+    numeroMinArray
+make: *** [src/subdir.mk:23: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:53:15 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+00:53:16 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:55:10 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+00:55:10 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+00:59:41 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+In file included from ../src/Arrays4.c:17:
+../src/arrayBiblioteca.h:6:32: error: unknown type name ‘tamanoArray’
+ int promedioArray(int array[], tamanoArray, int* promedio);
+                                ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:01:15 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+01:01:17 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+01:11:33 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+../src/arrayBiblioteca.c: In function ‘modificarValoresArray’:
+../src/arrayBiblioteca.c:65:10: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+  scanf("%d", valorNuevo);
+         ~^   ~~~~~~~~~~
+../src/arrayBiblioteca.c:63:20: warning: ‘posicionCambiar’ is used uninitialized in this function [-Wuninitialized]
+  scanf("%d", &array[posicionCambiar]);
+                    ^
+../src/arrayBiblioteca.c:65:2: warning: ‘valorNuevo’ is used uninitialized in this function [-Wuninitialized]
+  scanf("%d", valorNuevo);
+  ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+01:12:05 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+../src/arrayBiblioteca.c: In function ‘modificarValoresArray’:
+../src/arrayBiblioteca.c:63:20: warning: ‘posicionCambiar’ is used uninitialized in this function [-Wuninitialized]
+  scanf("%d", &array[posicionCambiar]);
+                    ^
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+01:12:39 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+01:13:05 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:39:31 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+../src/arrayBiblioteca.c: In function ‘modificarValoresArray’:
+../src/arrayBiblioteca.c:62:20: warning: ‘posicionCambiar’ is used uninitialized in this function [-Wuninitialized]
+  scanf("%d", &array[posicionCambiar]);
+                    ^
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:39:47 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:39:55 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:41:05 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+../src/arrayBiblioteca.c: In function ‘modificarValoresArray’:
+../src/arrayBiblioteca.c:62:20: warning: ‘posicionCambiar’ is used uninitialized in this function [-Wuninitialized]
+  scanf("%d", &array[posicionCambiar - 1]);
+                    ^
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:41:09 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:42:14 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:42:15 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:43:04 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:72:5: error: too many arguments to function ‘modificarValoresArray’
+     modificarValoresArray(array, ARRAY_LEN, valorNuevo);
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/Arrays4.c:17:
+../src/arrayBiblioteca.h:7:5: note: declared here
+ int modificarValoresArray(int array[], int tamanoArray);
+     ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/Arrays4.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:43:14 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:72:5: warning: ‘valorNuevo’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     modificarValoresArray(array, ARRAY_LEN, valorNuevo);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:43:23 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:72:45: warning: passing argument 3 of ‘modificarValoresArray’ makes integer from pointer without a cast [-Wint-conversion]
+     modificarValoresArray(array, ARRAY_LEN, &valorNuevo);
+                                             ^~~~~~~~~~~
+In file included from ../src/Arrays4.c:17:
+../src/arrayBiblioteca.h:7:61: note: expected ‘int’ but argument is of type ‘int *’
+ int modificarValoresArray(int array[], int tamanoArray, int valorNuevo);
+                                                         ~~~~^~~~~~~~~~
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:45:27 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:45:28 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:46:59 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:47:00 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:47:17 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:47:17 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:49:35 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:39:3: warning: implicit declaration of function ‘System’; did you mean ‘system’? [-Wimplicit-function-declaration]
+   System("clrs");
+   ^~~~~~
+   system
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+/usr/bin/ld: ./src/Arrays4.o: en la función `main':
+/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/Arrays4/Debug/../src/Arrays4.c:39: referencia a `System' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: Arrays4] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:49:56 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:50:01 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:50:22 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:50:24 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:50:34 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:50:34 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:50:43 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:50:44 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:51:26 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:51:27 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+13:52:16 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+13:52:17 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:07:14 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:07:15 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:09:31 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:09:32 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:10:18 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:10:19 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:14:04 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:14:05 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:14:50 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:14:51 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:15:20 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:15:21 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:16:02 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:16:03 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:29:12 **** Incremental Build of configuration Debug for project AdivinaNumero ****
+make all 
+make: No se hace nada para 'all'.
+14:29:13 **** Incremental Build of configuration Debug for project Arrays ****
+make all 
+make: No se hace nada para 'all'.
+14:29:13 **** Incremental Build of configuration Debug for project Arrays2 ****
+make all 
+make: No se hace nada para 'all'.
+14:29:13 **** Incremental Build of configuration Debug for project Arrays3 ****
+make all 
+Building file: ../src/Arrays3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays3.d" -MT"src/Arrays3.o" -o "src/Arrays3.o" "../src/Arrays3.c"
+Finished building: ../src/Arrays3.c
+ 
+Building target: Arrays3
+Invoking: GCC C Linker
+gcc  -o "Arrays3"  ./src/Arrays3.o   
+Finished building target: Arrays3
+ 
+14:29:13 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:29:13 **** Incremental Build of configuration Debug for project DivisionPuntero ****
+make all 
+make: No se hace nada para 'all'.
+14:29:13 **** Build of configuration Debug for project For6 ****
+make all 
+make: No se hace nada para 'all'.
+14:29:13 **** Incremental Build of configuration Debug for project FuncionGetNumero ****
+make all 
+make: No se hace nada para 'all'.
+14:29:14 **** Build of configuration Debug for project If3 ****
+make all 
+make: No se hace nada para 'all'.
+14:29:14 **** Incremental Build of configuration Debug for project NumeroMayor ****
+make all 
+make: No se hace nada para 'all'.
+14:29:14 **** Incremental Build of configuration Debug for project TrabajoPractico1 ****
+make all 
+Building file: ../src/TrabajoPractico1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TrabajoPractico1.d" -MT"src/TrabajoPractico1.o" -o "src/TrabajoPractico1.o" "../src/TrabajoPractico1.c"
+Finished building: ../src/TrabajoPractico1.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: TrabajoPractico1
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico1"  ./src/TrabajoPractico1.o ./src/utn.o   
+Finished building target: TrabajoPractico1
+ 
+14:32:57 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:32:58 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:34:41 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:34:41 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:35:49 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:35:50 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:45:22 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+../src/Arrays4.c: In function ‘main’:
+../src/Arrays4.c:29:7: warning: unused variable ‘continuar’ [-Wunused-variable]
+  char continuar;
+       ^~~~~~~~~
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:45:37 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:45:38 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:45:58 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:46:28 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:46:29 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:47:07 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:47:07 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:47:28 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/Arrays4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays4.d" -MT"src/Arrays4.o" -o "src/Arrays4.o" "../src/Arrays4.c"
+Finished building: ../src/Arrays4.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:47:29 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:50:30 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:53:18 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:53:19 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+make: No se hace nada para 'all'.
+14:53:36 **** Incremental Build of configuration Debug for project Arrays4 ****
+make all 
+Building file: ../src/arrayBiblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrayBiblioteca.d" -MT"src/arrayBiblioteca.o" -o "src/arrayBiblioteca.o" "../src/arrayBiblioteca.c"
+Finished building: ../src/arrayBiblioteca.c
+ 
+Building target: Arrays4
+Invoking: GCC C Linker
+gcc  -o "Arrays4"  ./src/Arrays4.o ./src/arrayBiblioteca.o   
+Finished building target: Arrays4
+ 
+14:53:37 **** Incremental Build of configuration Debug for project Arrays4 ****
 make all 
 make: No se hace nada para 'all'.
