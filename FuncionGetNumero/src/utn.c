@@ -22,20 +22,22 @@
 int utn_getNumero(int* pNumero, const char* pTexto, const char* mensajeError, int reintentos, int min, int max)
 {
 	int retorno = -1;
+	int bufferInt;
 	int errorLetra;
 
-	if(pNumero != NULL && pTexto != NULL && mensajeError != NULL && reintentos > 0 && min <= max)
+	if(pNumero != NULL && pTexto != NULL && mensajeError != NULL && reintentos >= 0 && min <= max)
 	{
 		do
 		{
 			printf(pTexto);
 			__fpurge(stdin);
-			errorLetra = scanf("%d", pNumero);
+			errorLetra = scanf("%d", &bufferInt);
 			if(errorLetra == 1)
 			{
-				if(*pNumero >= min && *pNumero <= max)
+				if(bufferInt >= min && bufferInt <= max)
 				{
 					retorno = 0;
+					*pNumero = bufferInt;
 					break;
 				}
 			}
@@ -66,6 +68,7 @@ int utn_getNumero(int* pNumero, const char* pTexto, const char* mensajeError, in
 float utn_getFloat(float* pNumero, const char* pTexto, const char* mensajeError, int reintentos, float min, float max)
 {
 	int retorno = -1;
+	float bufferFloat;
 	int errorLetra;
 
 	if(pNumero != NULL && pTexto != NULL && mensajeError != NULL && reintentos > 0 && min <= max)
@@ -74,12 +77,13 @@ float utn_getFloat(float* pNumero, const char* pTexto, const char* mensajeError,
 		{
 			printf(pTexto);
 			__fpurge(stdin);
-			errorLetra = scanf("%f", pNumero);
+			errorLetra = scanf("%f", &bufferFloat);
 			if(errorLetra == 1)
 			{
-				if(*pNumero >= min && *pNumero <= max)
+				if(bufferFloat >= min && bufferFloat <= max)
 				{
 					retorno = 0;
+					*pNumero = bufferFloat;
 					break;
 				}
 			}
@@ -110,7 +114,7 @@ float utn_getFloat(float* pNumero, const char* pTexto, const char* mensajeError,
 char utn_getChar(char* pChar, const char* pTexto, const char* mensajeError, int reintentos, char min, char max)
 {
 	int retorno = -1;
-	char caracter;
+	char bufferChar;
 	int errorLetra;
 
 	if(pChar != NULL && pTexto != NULL && mensajeError != NULL && reintentos > 0 && min <= max)
@@ -119,12 +123,12 @@ char utn_getChar(char* pChar, const char* pTexto, const char* mensajeError, int 
 		{
 			printf(pTexto);
 			__fpurge(stdin);
-			errorLetra = scanf("%c", &caracter);
+			errorLetra = scanf("%c", &bufferChar);
 			if(errorLetra == 1)
 			{
-				if(caracter >= min && caracter <= max)
+				if(bufferChar >= min && bufferChar <= max)
 				{
-					*pChar = caracter;
+					*pChar = bufferChar;
 					retorno = 0;
 					break;
 				}
@@ -142,20 +146,3 @@ char utn_getChar(char* pChar, const char* pTexto, const char* mensajeError, int 
 
 	return retorno;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -12,22 +12,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ARRAY_LEN 5
+#define LIMITE 5
 
 int promedioArrays(int array[], int tamanoArray, float* pPromedio);
 
 int main(void)
 {
-	int array[ARRAY_LEN];
+	int array[LIMITE];
 	float promedio;
 
-	for(int i = 0; i < ARRAY_LEN; i++)
+	for(int i = 0; i < LIMITE; i++)
 	{
 		printf("Ingrese un número: ");
 		scanf("%d", &array[i]);
 	}
 
-	if(promedioArrays(array, ARRAY_LEN, &promedio) == 0)
+	if(promedioArrays(array, LIMITE, &promedio) == 0)
 	{
 		printf("El promedio de las edades es: %0.2f", promedio);
 	}

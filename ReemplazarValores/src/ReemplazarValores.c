@@ -18,13 +18,11 @@ int main(void)
 {
 	int num1 = 3;
 	int num2 = 9;
-	int transpaso1;
-	int transpaso2;
+	int auxiliar;
 
-	transpaso1 = num1;
-	transpaso2 = num2;
-	num1 = transpaso2;
-	num2 = transpaso1;
+	auxiliar = num1;
+	num1 = num2;
+	num2 = auxiliar;
 
 	printf("num1: %d\nnum2: %d", num1, num2);
 
