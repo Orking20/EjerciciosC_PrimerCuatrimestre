@@ -157,3 +157,18 @@ Finished building target: OrdenArray
 23:51:17 **** Incremental Build of configuration Debug for project OrdenArray ****
 make all 
 make: No se hace nada para 'all'.
+00:24:24 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+00:24:25 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.

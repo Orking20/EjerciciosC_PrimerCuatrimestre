@@ -41,7 +41,7 @@ int ordenArray(int* array, int limite, int* punteroMinimo)
 int numeroMinArray(int array[], int tamanoArray, int inicio, int* pValorMinimo, int* pIndiceMinimo)
 {
 	int retorno = -1;
-	int indice = array[inicio];
+	int indice;
 	int minimo = array[inicio];
 
 	if(array != NULL && tamanoArray > 0 && pValorMinimo != NULL && pIndiceMinimo != NULL)
