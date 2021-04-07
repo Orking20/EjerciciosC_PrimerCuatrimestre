@@ -13,14 +13,29 @@
 
 #define LIMITE 9
 
+void ordenBurbujeo(int* array, int limite);
+
 int main(void)
 {
 	int array[LIMITE] = {16, 8, 13, 15, 19, 9, 2, 4, 11};
-	int auxiliar;
+
+	ordenBurbujeo(array, LIMITE);
 
 	for(int i = 0; i < LIMITE; i++)
 	{
-		for(int j = 0; j < LIMITE - i - 1; j++)
+		printf("%d\n", array[i]);
+	}
+
+	return EXIT_SUCCESS;
+}
+
+void ordenBurbujeo(int* array, int limite)
+{
+	int auxiliar;
+
+	for(int i = 0; i < limite; i++)
+	{
+		for(int j = 0; j < limite - i - 1; j++)
 		{
 			if(array[j] > array[j + 1])
 			{
@@ -30,11 +45,4 @@ int main(void)
 			}
 		}
 	}
-
-	for(int i = 0; i < LIMITE; i++)
-	{
-		printf("%d\n", array[i]);
-	}
-
-	return EXIT_SUCCESS;
 }

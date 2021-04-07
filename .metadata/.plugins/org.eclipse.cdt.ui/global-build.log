@@ -1,15 +1,15 @@
-16:59:41 **** Incremental Build of configuration Debug for project Arrays3 ****
+22:22:51 **** Incremental Build of configuration Debug for project OrdenBurbujaMejorado ****
 make all 
-Building file: ../src/Arrays3.c
+Building file: ../src/OrdenBurbujaMejorado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Arrays3.d" -MT"src/Arrays3.o" -o "src/Arrays3.o" "../src/Arrays3.c"
-Finished building: ../src/Arrays3.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenBurbujaMejorado.d" -MT"src/OrdenBurbujaMejorado.o" -o "src/OrdenBurbujaMejorado.o" "../src/OrdenBurbujaMejorado.c"
+Finished building: ../src/OrdenBurbujaMejorado.c
  
-Building target: Arrays3
+Building target: OrdenBurbujaMejorado
 Invoking: GCC C Linker
-gcc  -o "Arrays3"  ./src/Arrays3.o ./src/arrayBiblioteca.o   
-Finished building target: Arrays3
+gcc  -o "OrdenBurbujaMejorado"  ./src/OrdenBurbujaMejorado.o   
+Finished building target: OrdenBurbujaMejorado
  
-16:59:47 **** Incremental Build of configuration Debug for project Arrays3 ****
+22:22:53 **** Incremental Build of configuration Debug for project OrdenBurbujaMejorado ****
 make all 
 make: No se hace nada para 'all'.
