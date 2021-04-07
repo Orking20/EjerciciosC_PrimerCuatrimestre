@@ -1,15 +1,159 @@
-22:22:51 **** Incremental Build of configuration Debug for project OrdenBurbujaMejorado ****
+23:28:06 **** Incremental Build of configuration Debug for project OrdenArray ****
 make all 
-Building file: ../src/OrdenBurbujaMejorado.c
+Building file: ../src/OrdenArray.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenBurbujaMejorado.d" -MT"src/OrdenBurbujaMejorado.o" -o "src/OrdenBurbujaMejorado.o" "../src/OrdenBurbujaMejorado.c"
-Finished building: ../src/OrdenBurbujaMejorado.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenArray.d" -MT"src/OrdenArray.o" -o "src/OrdenArray.o" "../src/OrdenArray.c"
+Finished building: ../src/OrdenArray.c
  
-Building target: OrdenBurbujaMejorado
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
 Invoking: GCC C Linker
-gcc  -o "OrdenBurbujaMejorado"  ./src/OrdenBurbujaMejorado.o   
-Finished building target: OrdenBurbujaMejorado
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
  
-22:22:53 **** Incremental Build of configuration Debug for project OrdenBurbujaMejorado ****
+23:28:09 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.
+23:30:46 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+23:30:47 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.
+23:36:16 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+23:36:17 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.
+23:38:54 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+23:38:55 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.
+23:45:09 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+../src/biblioteca.c: In function ‘ordenArray’:
+../src/biblioteca.c:16:4: error: too many arguments to function ‘numeroMinArray’
+    numeroMinArray(array, limite, i, &valorMinimo, &indiceMinimo);
+    ^~~~~~~~~~~~~~
+In file included from ../src/biblioteca.c:3:
+../src/biblioteca.h:4:5: note: declared here
+ int numeroMinArray(int array[], int tamanoArray, int inicio, int* pMinimo);
+     ^~~~~~~~~~~~~~
+../src/biblioteca.c: At top level:
+../src/biblioteca.c:39:5: error: conflicting types for ‘numeroMinArray’
+ int numeroMinArray(int array[], int tamanoArray, int inicio, int* pValorMinimo, int* pIndiceMinimo)
+     ^~~~~~~~~~~~~~
+In file included from ../src/biblioteca.c:3:
+../src/biblioteca.h:4:5: note: previous declaration of ‘numeroMinArray’ was here
+ int numeroMinArray(int array[], int tamanoArray, int inicio, int* pMinimo);
+     ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/biblioteca.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:45:20 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/OrdenArray.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenArray.d" -MT"src/OrdenArray.o" -o "src/OrdenArray.o" "../src/OrdenArray.c"
+../src/OrdenArray.c: In function ‘numeroMinArray’:
+../src/OrdenArray.c:18:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+In file included from ../src/OrdenArray.c:13:
+../src/biblioteca.h:4:5: error: old-style parameter declarations in prototyped function definition
+ int numeroMinArray(int array[], int tamanoArray, int inicio, int* pValorMinimo, int* pIndiceMinimo)
+     ^~~~~~~~~~~~~~
+../src/OrdenArray.c:30: error: expected ‘{’ at end of input
+ }
+ 
+../src/OrdenArray.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/OrdenArray.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:45:31 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/OrdenArray.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenArray.d" -MT"src/OrdenArray.o" -o "src/OrdenArray.o" "../src/OrdenArray.c"
+Finished building: ../src/OrdenArray.c
+ 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+23:45:32 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.
+23:46:24 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+23:46:24 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+make: No se hace nada para 'all'.
+23:51:16 **** Incremental Build of configuration Debug for project OrdenArray ****
+make all 
+Building file: ../src/biblioteca.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
+Finished building: ../src/biblioteca.c
+ 
+Building target: OrdenArray
+Invoking: GCC C Linker
+gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
+Finished building target: OrdenArray
+ 
+23:51:17 **** Incremental Build of configuration Debug for project OrdenArray ****
 make all 
 make: No se hace nada para 'all'.
