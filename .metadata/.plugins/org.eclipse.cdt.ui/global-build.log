@@ -1,174 +1,345 @@
-23:28:06 **** Incremental Build of configuration Debug for project OrdenArray ****
+15:31:15 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/OrdenArray.c
+Building file: ../src/PedirDatos.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenArray.d" -MT"src/OrdenArray.o" -o "src/OrdenArray.o" "../src/OrdenArray.c"
-Finished building: ../src/OrdenArray.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+Finished building: ../src/PedirDatos.c
  
-Building file: ../src/biblioteca.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
- 
-Building target: OrdenArray
+Building target: PedirDatos
 Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
  
-23:28:09 **** Incremental Build of configuration Debug for project OrdenArray ****
+15:31:18 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
 make: No se hace nada para 'all'.
-23:30:46 **** Incremental Build of configuration Debug for project OrdenArray ****
+15:48:20 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/biblioteca.c
+Building file: ../src/PedirDatos.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+Finished building: ../src/PedirDatos.c
  
-Building target: OrdenArray
-Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
- 
-23:30:47 **** Incremental Build of configuration Debug for project OrdenArray ****
-make all 
-make: No se hace nada para 'all'.
-23:36:16 **** Incremental Build of configuration Debug for project OrdenArray ****
-make all 
-Building file: ../src/biblioteca.c
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
- 
-Building target: OrdenArray
-Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
- 
-23:36:17 **** Incremental Build of configuration Debug for project OrdenArray ****
-make all 
-make: No se hace nada para 'all'.
-23:38:54 **** Incremental Build of configuration Debug for project OrdenArray ****
-make all 
-Building file: ../src/biblioteca.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
- 
-Building target: OrdenArray
-Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
- 
-23:38:55 **** Incremental Build of configuration Debug for project OrdenArray ****
-make all 
-make: No se hace nada para 'all'.
-23:45:09 **** Incremental Build of configuration Debug for project OrdenArray ****
-make all 
-Building file: ../src/biblioteca.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-../src/biblioteca.c: In function ‘ordenArray’:
-../src/biblioteca.c:16:4: error: too many arguments to function ‘numeroMinArray’
-    numeroMinArray(array, limite, i, &valorMinimo, &indiceMinimo);
-    ^~~~~~~~~~~~~~
-In file included from ../src/biblioteca.c:3:
-../src/biblioteca.h:4:5: note: declared here
- int numeroMinArray(int array[], int tamanoArray, int inicio, int* pMinimo);
-     ^~~~~~~~~~~~~~
-../src/biblioteca.c: At top level:
-../src/biblioteca.c:39:5: error: conflicting types for ‘numeroMinArray’
- int numeroMinArray(int array[], int tamanoArray, int inicio, int* pValorMinimo, int* pIndiceMinimo)
-     ^~~~~~~~~~~~~~
-In file included from ../src/biblioteca.c:3:
-../src/biblioteca.h:4:5: note: previous declaration of ‘numeroMinArray’ was here
- int numeroMinArray(int array[], int tamanoArray, int inicio, int* pMinimo);
-     ^~~~~~~~~~~~~~
-make: *** [src/subdir.mk:23: src/biblioteca.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c:1:3: error: expected ‘;’ before ‘typedef’
+ ca/*
+   ^
+   ;
+make: *** [src/subdir.mk:23: src/utn.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-23:45:20 **** Incremental Build of configuration Debug for project OrdenArray ****
+15:49:01 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/OrdenArray.c
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenArray.d" -MT"src/OrdenArray.o" -o "src/OrdenArray.o" "../src/OrdenArray.c"
-../src/OrdenArray.c: In function ‘numeroMinArray’:
-../src/OrdenArray.c:18:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- {
- ^
-In file included from ../src/OrdenArray.c:13:
-../src/biblioteca.h:4:5: error: old-style parameter declarations in prototyped function definition
- int numeroMinArray(int array[], int tamanoArray, int inicio, int* pValorMinimo, int* pIndiceMinimo)
-     ^~~~~~~~~~~~~~
-../src/OrdenArray.c:30: error: expected ‘{’ at end of input
- }
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
  
-../src/OrdenArray.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/subdir.mk:23: src/OrdenArray.o] Error 1
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+15:49:03 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+15:49:12 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+15:49:17 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+15:49:52 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+15:49:53 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+15:49:58 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+15:50:03 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+15:51:50 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/PedirDatos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+Finished building: ../src/PedirDatos.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+15:51:50 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+17:14:15 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/PedirDatos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+../src/PedirDatos.c: In function ‘main’:
+../src/PedirDatos.c:23:7: error: array size missing in ‘nombre’
+  char nombre[TAM_NOMBRE];
+       ^~~~~~
+make: *** [src/subdir.mk:23: src/PedirDatos.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-23:45:31 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:14:25 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/OrdenArray.c
+Building file: ../src/PedirDatos.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OrdenArray.d" -MT"src/OrdenArray.o" -o "src/OrdenArray.o" "../src/OrdenArray.c"
-Finished building: ../src/OrdenArray.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+Finished building: ../src/PedirDatos.c
  
-Building file: ../src/biblioteca.c
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getNombre’:
+../src/utn.c:187:44: warning: argument to ‘sizeof’ in ‘strncpy’ call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+    strncpy(pResultado, bufferString, sizeof(pResultado));
+                                            ^
+Finished building: ../src/utn.c
  
-Building target: OrdenArray
+Building target: PedirDatos
 Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
  
-23:45:32 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:16:06 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/PedirDatos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+Finished building: ../src/PedirDatos.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+17:16:07 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
 make: No se hace nada para 'all'.
-23:46:24 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:19:00 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/biblioteca.c
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
  
-Building target: OrdenArray
+Building target: PedirDatos
 Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
  
-23:46:24 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:19:02 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
 make: No se hace nada para 'all'.
-23:51:16 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:20:19 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/biblioteca.c
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
  
-Building target: OrdenArray
+Building target: PedirDatos
 Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
  
-23:51:17 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:20:20 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
 make: No se hace nada para 'all'.
-00:24:24 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:20:26 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
-Building file: ../src/biblioteca.c
+make: No se hace nada para 'all'.
+17:20:30 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+17:20:41 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+17:22:19 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/biblioteca.d" -MT"src/biblioteca.o" -o "src/biblioteca.o" "../src/biblioteca.c"
-Finished building: ../src/biblioteca.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
  
-Building target: OrdenArray
+Building target: PedirDatos
 Invoking: GCC C Linker
-gcc  -o "OrdenArray"  ./src/OrdenArray.o ./src/biblioteca.o   
-Finished building target: OrdenArray
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
  
-00:24:25 **** Incremental Build of configuration Debug for project OrdenArray ****
+17:22:19 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+17:22:26 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+17:22:35 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+make: No se hace nada para 'all'.
+17:51:50 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/PedirDatos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+../src/PedirDatos.c: In function ‘main’:
+../src/PedirDatos.c:53:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   printf("%s", precio);
+           ~^   ~~~~~~
+           %d
+Finished building: ../src/PedirDatos.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getPrecio’:
+../src/utn.c:216:13: warning: passing argument 1 of ‘getInt’ makes pointer from integer without a cast [-Wint-conversion]
+   if(getInt(bufferInt) == 0 && validarPrecio())
+             ^~~~~~~~~
+../src/utn.c:15:24: note: expected ‘int *’ but argument is of type ‘int’
+ static int getInt(int *pResultado);
+                   ~~~~~^~~~~~~~~~
+../src/utn.c:216:32: error: too few arguments to function ‘validarPrecio’
+   if(getInt(bufferInt) == 0 && validarPrecio())
+                                ^~~~~~~~~~~~~
+../src/utn.c:21:12: note: declared here
+ static int validarPrecio(char* cadena, int limite);
+            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:52:36 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getPrecio’:
+../src/utn.c:216:13: warning: passing argument 1 of ‘getInt’ makes pointer from integer without a cast [-Wint-conversion]
+   if(getInt(bufferInt) == 0 && validarPrecio(bufferInt, sizeof(bufferInt)))
+             ^~~~~~~~~
+../src/utn.c:15:24: note: expected ‘int *’ but argument is of type ‘int’
+ static int getInt(int *pResultado);
+                   ~~~~~^~~~~~~~~~
+../src/utn.c:216:46: warning: passing argument 1 of ‘validarPrecio’ makes pointer from integer without a cast [-Wint-conversion]
+   if(getInt(bufferInt) == 0 && validarPrecio(bufferInt, sizeof(bufferInt)))
+                                              ^~~~~~~~~
+../src/utn.c:21:32: note: expected ‘char *’ but argument is of type ‘int’
+ static int validarPrecio(char* cadena, int limite);
+                          ~~~~~~^~~~~~
+../src/utn.c:216:6: warning: ‘bufferInt’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(getInt(bufferInt) == 0 && validarPrecio(bufferInt, sizeof(bufferInt)))
+      ^~~~~~~~~~~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+17:53:24 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getPrecio’:
+../src/utn.c:216:47: warning: passing argument 1 of ‘validarPrecio’ makes pointer from integer without a cast [-Wint-conversion]
+   if(getInt(&bufferInt) == 0 && validarPrecio(bufferInt, sizeof(bufferInt)))
+                                               ^~~~~~~~~
+../src/utn.c:21:32: note: expected ‘char *’ but argument is of type ‘int’
+ static int validarPrecio(char* cadena, int limite);
+                          ~~~~~~^~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+17:54:03 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getPrecio’:
+../src/utn.c:216:47: warning: passing argument 1 of ‘validarPrecio’ from incompatible pointer type [-Wincompatible-pointer-types]
+   if(getInt(&bufferInt) == 0 && validarPrecio(&bufferInt, sizeof(bufferInt)))
+                                               ^~~~~~~~~~
+../src/utn.c:21:32: note: expected ‘char *’ but argument is of type ‘int *’
+ static int validarPrecio(char* cadena, int limite);
+                          ~~~~~~^~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+17:57:54 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/PedirDatos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+../src/PedirDatos.c: In function ‘main’:
+../src/PedirDatos.c:51:5: warning: implicit declaration of function ‘utn_getPrecio’; did you mean ‘utn_getTexto’? [-Wimplicit-function-declaration]
+  if(utn_getPrecio(&precio, "Ingrese el precio: \n", "Error. Solo puedes ingresar el símbolo $ y números\n") == 0)
+     ^~~~~~~~~~~~~
+     utn_getTexto
+../src/PedirDatos.c:53:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   printf("%s", precio);
+           ~^   ~~~~~~
+           %d
+Finished building: ../src/PedirDatos.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+/usr/bin/ld: ./src/PedirDatos.o: en la función `main':
+/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/PedirDatos/Debug/../src/PedirDatos.c:51: referencia a `utn_getPrecio' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: PedirDatos] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:58:05 **** Incremental Build of configuration Debug for project PedirDatos ****
+make all 
+Building file: ../src/PedirDatos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirDatos.d" -MT"src/PedirDatos.o" -o "src/PedirDatos.o" "../src/PedirDatos.c"
+Finished building: ../src/PedirDatos.c
+ 
+Building target: PedirDatos
+Invoking: GCC C Linker
+gcc  -o "PedirDatos"  ./src/PedirDatos.o ./src/utn.o   
+Finished building target: PedirDatos
+ 
+17:58:07 **** Incremental Build of configuration Debug for project PedirDatos ****
 make all 
 make: No se hace nada para 'all'.
