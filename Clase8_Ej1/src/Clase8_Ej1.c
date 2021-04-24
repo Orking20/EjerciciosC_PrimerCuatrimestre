@@ -25,10 +25,6 @@ int main(void)
 	Persona arrayPersonas[CANT_PERSONAS];
 	inicializarPersonas(arrayPersonas, CANT_PERSONAS);
 	int opcionMenu;
-	char nombre[100];
-	char apellido[100];
-	int legajo;
-	int indice;
 
 	do
 	{
@@ -40,43 +36,16 @@ int main(void)
 			{
 				ordenarPersonas(arrayPersonas, CANT_PERSONAS);
 				mostrarPersonas(arrayPersonas, CANT_PERSONAS);
-				for(int i = 0; i < CANT_PERSONAS; i++)
-				{
-					printf("APELLIDO %s\n", arrayPersonas[i].apellido);
-				}
-				for(int i = 0; i < CANT_PERSONAS; i++)
-				{
-					printf("NOMBRE %s\n", arrayPersonas[i].nombre);
-				}
 				break;
 			}
 			case 2:
 			{
-				utn_getNumero(&indice, "Ingrese la posición de la nueva persona: \n", "Hubo un error\n", 0, 200, 5);
-				utn_getTexto(nombre, TAM_ARRAY, "Ingrese el nombre: \n", "Hubo un error\n");
-				utn_getTexto(apellido, TAM_ARRAY, "Ingrese el apellido: \n", "Hubo un error\n");
-				utn_getNumero(&legajo, "Ingrese el legajo: \n", "Hubo un error\n", 1, 10000, 5);
-
-				for(int i = 0; i < CANT_PERSONAS; i++)
-				{
-					while(arrayPersonas[i].legajo == legajo)
-					{
-						printf("Error. Ese legajo ya existe.\n");
-						utn_getNumero(&legajo, "Ingrese el legajo: \n", "Hubo un error\n", 1, 10000, 5);
-						i = -1;
-						break;
-					}
-				}
-
-				cargarPersonas(arrayPersonas, CANT_PERSONAS, indice, nombre, apellido, legajo);
+				cargarPersonas(arrayPersonas, CANT_PERSONAS, buscarIndiceVacio(arrayPersonas, CANT_PERSONAS));
 				break;
 			}
 			case 3:
 			{
-				utn_getNumero(&indice, "Ingrese la posición de la persona a eliminar: \n", "Hubo un error\n", 1, 10000, 5);
-				cargarPersonas(arrayPersonas, CANT_PERSONAS, indice, "", "", 0);
-				arrayPersonas[indice].isEmpty = 1;
-				printf("Eliminado con éxito\n");
+				eliminarPersonas(arrayPersonas, CANT_PERSONAS);
 				break;
 			}
 		}

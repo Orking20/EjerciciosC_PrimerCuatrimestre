@@ -13,6 +13,20 @@ int utn_getDecimal(float* pNumero, char* pMensaje, char* pMensajeError, float mi
 int utn_getTexto(char* pString, int limite, char* pMensaje, char* pMensajeError);
 int utn_getCaracter(char* pChar, char* pMensaje, char* pMensajeError, char min, char max, int reintentos);
 
-int utn_getNombre(char* pResultado, int limite, char* pMensaje, char* pMensajeError);
+int utn_getCadenaMayusculas(char* pString, int limite, char* pMensaje, char* pMensajeError);
+int utn_getCadenaMinusculas(char* pString, int limite, char* pMensaje, char* pMensajeError);
+
+int utn_getNombre(char* pNombre, char* pMensaje, char* pMensajeError);
+int utn_getDescripcion(char* pDescripcion, char* pMensaje, char* pMensajeError);
+int utn_getDni(char* pDni, char* pMensaje, char* pMensajeError);
+int utn_getCuit(char* pCuit, char* pMensaje, char* pMensajeError);
+int utn_getEdad(int* pEdad, char* pMensaje, char* pMensajeError);
+int utn_getPrecio(float* pPrecio, char* pMensaje, char* pMensajeError);
+int utn_getTelefono(char* pTelefono, char* pMensaje, char* pMensajeError);
+int utn_getCelular(char* pCelular, char* pMensaje, char* pMensajeError);
+int utn_getEmail(char* pEmail, char* pMensaje, char* pMensajeError);
+int utn_getSitioWeb(char* pSitioWeb, char* pMensaje, char* pMensajeError);
+int utn_getTarjetaCredito(char* pTarjeta, char* pMensaje, char* pMensajeError);
+int utn_getDireccion(char* pDireccion, char* pMensaje, char* pMensajeAltura, char* pMensajeError, char* pMensajeErrorAltura);
 
 #endif /* UTN_H_ */

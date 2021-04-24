@@ -15,47 +15,44 @@
 static int getInt(int *pResultado);
 static int getFloat(float *pResultado);
 static int getString(char* cadena, int limite);
-static int esNumerica(char* cadena);
-static int esDecimal(char* cadena);
-static int myGets(char* cadena, int longitud);
+static int validarEntero(char* cadena, int limite);
+static int validarDecimal(char* cadena, int limite);
+static int validarNombre(char* cadena, int limite);
 
 /**
  * \brief Le pide al usuario un número entero entre un rango con reintentos
  * \param int* pNumero: Puntero donde se almacena el número ingresado por el usuario
- * \param const char* pTexto: Texto para que el usuario sepa que ingresar
- * \param const char* mensajeError: Texto que nos indica que hubo un error
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
  * \param int min: El rango mínimo para ingresar un número
  * \param int max: El rango máximo para ingresar un número
  * \param int reintentos: Los reintentos que tiene el usuario para poner números correctos
  * \return Retorna 0 (EXITO) si se obtiene un número entre el rango o -1 (ERROR) si no*/
-int utn_getNumero(int* pNumero, const char* pTexto, const char* mensajeError, int min, int max, int reintentos)
+int utn_getNumero(int* pNumero, char* pMensaje, char* pMensajeError, int min, int max, int reintentos)
 {
 	int retorno = -1;
 	int bufferInt;
 
-	if(pNumero != NULL && pTexto != NULL && mensajeError != NULL && reintentos >= 0 && min <= max)
+	if(pNumero != NULL && pMensaje != NULL && pMensajeError != NULL && reintentos >= 0 && min <= max)
 	{
 		do
 		{
-			printf(pTexto);
+			printf("%s", pMensaje);
 			__fpurge(stdin);
-			if(getInt(&bufferInt) == 0)
+			if(getInt(&bufferInt) == 0 && bufferInt >= min && bufferInt <= max)
 			{
-				if(bufferInt >= min && bufferInt <= max)
-				{
-					retorno = 0;
-					*pNumero = bufferInt;
-					break;
-				}
+				retorno = 0;
+				*pNumero = bufferInt;
+				break;
 			}
 
 			reintentos--;
-			printf(mensajeError);
+			printf("%s", pMensajeError);
 		}while(reintentos > 0);
 
 		if(reintentos == 0)
 		{
-			printf("Te quedaste sin intentos");
+			printf("Te quedaste sin intentos\n");
 		}
 	}
 
@@ -65,22 +62,22 @@ int utn_getNumero(int* pNumero, const char* pTexto, const char* mensajeError, in
 /**
  * \brief Le pide al usuario un número decimal entre un rango con reintentos
  * \param float* pNumero: Puntero donde se almacena el número ingresado por el usuario
- * \param const char* pTexto: Texto para que el usuario sepa que ingresar
- * \param const char* sError: Texto que nos indica que hubo un error
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
  * \param float min: El rango mínimo para ingresar un número
  * \param float max: El rango máximo para ingresar un número
  * \param int reintentos: Los reintentos que tiene el usuario para poner números correctos
  * \return Retorna 0 (EXITO) si se obtiene un número decimal entre el rango o -1 (ERROR) si no*/
-int utn_getDecimal(float* pNumero, const char* pTexto, const char* mensajeError, float min, float max, int reintentos)
+int utn_getDecimal(float* pNumero, char* pMensaje, char* pMensajeError, float min, float max, int reintentos)
 {
 	int retorno = -1;
 	float bufferFloat;
 
-	if(pNumero != NULL && pTexto != NULL && mensajeError != NULL && reintentos > 0 && min <= max)
+	if(pNumero != NULL && pMensaje != NULL && pMensajeError != NULL && reintentos > 0 && min <= max)
 	{
 		do
 		{
-			printf(pTexto);
+			printf("%s", pMensaje);
 			__fpurge(stdin);
 			if(getFloat(&bufferFloat) == 0)
 			{
@@ -93,12 +90,12 @@ int utn_getDecimal(float* pNumero, const char* pTexto, const char* mensajeError,
 			}
 
 			reintentos--;
-			printf(mensajeError);
+			printf("%s", pMensajeError);
 		}while(reintentos > 0);
 
 		if(reintentos == 0)
 		{
-			printf("Te quedaste sin intentos");
+			printf("Te quedaste sin intentos\n");
 		}
 	}
 
@@ -108,22 +105,27 @@ int utn_getDecimal(float* pNumero, const char* pTexto, const char* mensajeError,
 /**
  * \brief Le pide al usuario que ingrese un texto
  * \param char* pString: Puntero donde se almacenará el texto ingresado por el usuario
- * \param const char* pMensaje: Texto para que el usuario sepa que ingresar
- * \param const char* pMensajeError: Texto que nos tira un error si ingresamos letra en vez de números
+ * \param int limite: El limite o tamaño de la cadena
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
  * \return Retorna 0 (EXITO) si se obtiene el texto o -1 (ERROR) si no*/
-int utn_getTexto(char* pString, int limite, const char* pMensaje, const char* pMensajeError)
+int utn_getTexto(char* pString, int limite, char* pMensaje, char* pMensajeError)
 {
 	int retorno = -1;
 	char bufferString[4096];
 
 	if(pString != NULL && limite > 0 && pMensaje != NULL && pMensajeError != NULL)
 	{
-		printf(pMensaje);
+		printf("%s", pMensaje);
 		__fpurge(stdin);
 		if(getString(bufferString, sizeof(bufferString)) == 0)
 		{
 			strncpy(pString, bufferString, limite);
 			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
 		}
 	}
 
@@ -133,22 +135,22 @@ int utn_getTexto(char* pString, int limite, const char* pMensaje, const char* pM
 /**
  * \brief Le pide al usuario un caracter entre un rango con reintentos
  * \param char* pChar: El caracter ingresado por el usuario
- * \param const char* pTexto: Texto para que el usuario sepa que ingresar
- * \param const char* mensajeError: Texto que nos tira un error si ingresamos letra en vez de números
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
  * \param char min: El rango mínimo para ingresar un número
  * \param char max: El rango máximo para ingresar un número
  * \param int reintentos: Los reintentos que tiene el usuario para poner números correctos
  * \return Retorna 0 (EXITO) si se obtiene una letra entre el rango o -1 (ERROR) si no*/
-int utn_getCaracter(char* pChar, const char* pTexto, const char* mensajeError, char min, char max, int reintentos)
+int utn_getCaracter(char* pChar, char* pMensaje, char* pMensajeError, char min, char max, int reintentos)
 {
 	int retorno = -1;
 	char bufferChar;
 
-	if(pChar != NULL && pTexto != NULL && mensajeError != NULL && reintentos > 0 && min <= max)
+	if(pChar != NULL && pMensaje != NULL && pMensajeError != NULL && reintentos > 0 && min <= max)
 	{
 		do
 		{
-			printf(pTexto);
+			printf("%s", pMensaje);
 			__fpurge(stdin);
 			if(scanf("%c", &bufferChar) == 1)
 			{
@@ -161,12 +163,41 @@ int utn_getCaracter(char* pChar, const char* pTexto, const char* mensajeError, c
 			}
 
 			reintentos--;
-			printf(mensajeError);
+			printf("%s", pMensajeError);
 		}while(reintentos > 0);
 
 		if(reintentos == 0)
 		{
-			printf("Te quedaste sin intentos");
+			printf("Te quedaste sin intentos\n");
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Le pide al usuario que ingrese un nombre
+ * \param char* pResultado: Puntero donde se almacenará el nombre ingresado por el usuario
+ * \param int limite: El limite o tamaño de la cadena
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
+ * \return Retorna 0 (EXITO) si se obtiene el nombre o -1 (ERROR) si no*/
+int utn_getNombre(char* pResultado, int limite, char* pMensaje, char* pMensajeError)
+{
+	int retorno = -1;
+	char bufferString[100];
+
+	printf("%s", pMensaje);
+	if(pResultado != NULL && limite > 0 && pMensaje != NULL && pMensajeError != NULL)
+	{
+		if(getString(bufferString, sizeof(bufferString)) == 0 && validarNombre(bufferString, sizeof(bufferString)) == 1)
+		{
+			strncpy(pResultado, bufferString, limite);
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
 		}
 	}
 
@@ -180,13 +211,14 @@ int utn_getCaracter(char* pChar, const char* pTexto, const char* mensajeError, c
 static int getInt(int* pResultado)
 {
 	int retorno = -1;
-	char buffer[64];
+	char bufferInt[64];
 
 	if(pResultado != NULL)
 	{
-		if(myGets(buffer, sizeof(buffer)) == 0 && esNumerica(buffer))
+		__fpurge(stdin);
+		if(getString(bufferInt, sizeof(bufferInt)) == 0 && validarEntero(bufferInt, sizeof(bufferInt)))
 		{
-			*pResultado = atoi(buffer);
+			*pResultado = atoi(bufferInt);
 			retorno = 0;
 		}
 	}
@@ -201,13 +233,13 @@ static int getInt(int* pResultado)
 static int getFloat(float* pResultado)
 {
 	int retorno = -1;
-	char buffer[64];
+	char bufferFloat[64];
 
 	if(pResultado != NULL)
 	{
-		if(myGets(buffer, sizeof(buffer)) == 0 && esDecimal(buffer))
+		if(getString(bufferFloat, sizeof(bufferFloat)) == 0 && validarDecimal(bufferFloat, sizeof(bufferFloat)))
 		{
-			*pResultado = atof(buffer);
+			*pResultado = atof(bufferFloat);
 			retorno = 0;
 		}
 	}
@@ -216,7 +248,7 @@ static int getFloat(float* pResultado)
 }
 
 /**
- * \brief Pide un número al usuario y se encarga de que no quede un enter en el buffer
+ * \brief Pide un texto al usuario y se encarga de que no quede un enter en el buffer
  * \param char* pResultado: Puntero donde se almacenará el texto ingresado
  * \return Retorna 0 (EXITO) si se obtiene el texto o -1 (ERROR) si no*/
 static int getString(char* cadena, int limite)
@@ -239,26 +271,27 @@ static int getString(char* cadena, int limite)
 }
 
 /**
- * \brief Verifica que la cadena recibida contenga solamente números positivos o negativos
+ * \brief Valida que la cadena recibida contenga solamente números enteros
  * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
  * \return Retorna 1 (verdadero) si la cadena es numérica, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
-static int esNumerica(char* cadena)
+static int validarEntero(char* cadena, int limite)
 {
 	int retorno = -1;
-	int signo = 1;
 
-	if(cadena != NULL && strlen(cadena) > 0)
+	if(cadena != NULL && limite > 0)
 	{
-		retorno = 0;
-		for(int i = 0; cadena[i] != '\0'; i++)
+		retorno = 1;
+		for(int i = 0; i < limite && cadena[i] != '\0'; i++)
 		{
-			if(cadena[i] >= '0' && cadena[i] <= '9')
+			if(i == 0 && (cadena[i] == '-' || cadena[i] == '+'))
 			{
-				if(i == 0 && cadena[i] == '-' && signo)
-				{
-					signo = 0;
-				}
-				retorno = 1;
+				continue;
+			}
+			if(cadena[i] < '0' || cadena[i] > '9')
+			{
+				retorno = 0;
+				break;
 			}
 		}
 	}
@@ -267,31 +300,33 @@ static int esNumerica(char* cadena)
 }
 
 /**
- * \brief Verifica que la cadena recibida contenga solamente números decimales positivos o negativos
+ * \brief Valida que la cadena recibida contenga solamente números decimales positivos o negativos
  * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
  * \return Retorna 1 (verdadero) si la cadena es decimal, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
-static int esDecimal(char* cadena)
+static int validarDecimal(char* cadena, int limite)
 {
 	int retorno = -1;
 	int punto = 1;
-	int signo = 1;
 
-	if(cadena != NULL && strlen(cadena) > 0)
+	if(cadena != NULL && limite > 0)
 	{
-		retorno = 0;
-		for(int i = 0; cadena[i] != '\0'; i++)
+		retorno = 1;
+		for(int i = 0; i < limite && cadena[i] != '\0'; i++)
 		{
-			if(cadena[i] >= '0' && cadena[i] <= '9')
+			if(i == 0 && (cadena[i] == '-' || cadena[i] == '+'))
 			{
-				if(i == 0 && cadena[i] == '-' && signo)
-				{
-					signo = 0;
-				}
-				if(cadena[i] == '.' && punto)
-				{
-					punto = 0;
-				}
-				retorno = 1;
+				continue;
+			}
+			if(punto && cadena[i] == '.')
+			{
+				punto = 0;
+				continue;
+			}
+			if(cadena[i] < '0' || cadena[i] > '9')
+			{
+				retorno = 0;
+				break;
 			}
 		}
 	}
@@ -300,25 +335,30 @@ static int esDecimal(char* cadena)
 }
 
 /**
-* \brief Verifica que en la cadena no quede un enter
-* \param char* cadena: Puntero al espacio de memoria donde se copiará la cadena obtenida
-* \param longitud: Define el tamaño de la cadena
-* \return Retorna 0 (EXITO) si se obtiene una cadena y -1 (ERROR) si no*/
-static int myGets(char* cadena, int longitud)
+ * \brief Valida que la cadena recibida contenga sea un nombre o apellido
+ * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
+ * \return Retorna 1 (verdadero) si la cadena es un nombre o apellido, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
+static int validarNombre(char* cadena, int limite)
 {
 	int retorno = -1;
 
-	if(cadena != NULL && longitud > 0 && fgets(cadena, longitud, stdin) != NULL)
+	if(cadena != NULL && limite > 0)
 	{
-		__fpurge(stdin);
-		if(cadena[strlen(cadena) - 1] == '\n')
+		retorno = 1;
+		for(int i = 0; i < limite && cadena[i] != '\0'; i++)
 		{
-			cadena[strlen(cadena) - 1] = '\0';
+			if((i == 0 || cadena[i - 1] == ' ') && cadena[i] >= 'A' && cadena[i] <= 'Z')
+			{
+				continue;
+			}
+			if((cadena[i] < 'a' || cadena[i] > 'z') && cadena[i] != ' ')
+			{
+				retorno = 0;
+				break;
+			}
 		}
-		retorno = 0;
 	}
 
 	return retorno;
 }
-
-

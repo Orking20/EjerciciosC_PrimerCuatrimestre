@@ -13,13 +13,14 @@ typedef struct
 	char nombre[100];
 	char apellido[100];
 	int legajo;
-	int indice;
 	int isEmpty;
 }Persona;
 
 int inicializarPersonas(Persona* pArray, int limite);
-int cargarPersonas(Persona* pPersona, int limite, int indice, char* nombre, char* apellido, int legajo);
+int cargarPersonas(Persona* pPersona, int limite, int indice);
+int eliminarPersonas(Persona* pPersona, int limite);
 int mostrarPersonas(Persona* pArray, int limite);
 int ordenarPersonas(Persona* pArray, int limite);
+int buscarIndiceVacio(Persona* pProducto, int limite);
 
 #endif /* PERSONA_H_ */
