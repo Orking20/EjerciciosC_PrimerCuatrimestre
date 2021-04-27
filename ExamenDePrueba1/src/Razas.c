@@ -35,7 +35,25 @@ int inicializarRazas(Raza* pRazas, int limite)
 	return retorno;
 }
 
-int altaRaza(Raza* pRazas, int indice)
+void harcodeoRazas(Raza* pRazas, int limite)
+{
+	int id[7] = {1, 2, 3, 4, 5, 6, 7};
+	char descripcion[7][64] = {"Siames", "Doberman", "Persa", "Pastor Belga", "Bengala", "Dogo", "Pastor Alemán"};
+	int tamanio[7] = {1, 3, 2, 3, 2, 2, 3};
+	char paisOrigen[7][64] = {"Tailandia", "Alemania", "Persia", "Bélgica", "EEUU", "Argentina", "Alemania"};
+	int isEmpty[7] = {0, 0, 0, 0, 0, 0, 0};
+
+	for(int i = 0; i < limite; i++)
+	{
+		pRazas[i].idRaza = id[i];
+		strncpy(pRazas[i].descripcion, descripcion[i], sizeof(pRazas[i].descripcion));
+		pRazas[i].tamanio = tamanio[i];
+		strncpy(pRazas[i].paisOrigen, paisOrigen[i], sizeof(pRazas[i].paisOrigen));
+		pRazas[i].isEmpty = isEmpty[i];
+	}
+}
+
+int altaRaza(Raza* pRazas, int indice, int* cantPaises)
 {
 	int retorno = -1;
 	Raza bufferRaza;
@@ -49,6 +67,7 @@ int altaRaza(Raza* pRazas, int indice)
 			bufferRaza.idRaza = indice + 1;
 			bufferRaza.isEmpty = 0;
 			pRazas[indice] = bufferRaza;
+			cantPaises++;
 			retorno = 0;
 		}
 		else
@@ -70,7 +89,7 @@ int mostrarRazas(Raza* pRazas, int limite)
 		{
 			if(!pRazas[i].isEmpty)
 			{
-				printf("ID: %-10d Descripción: %-10s Pais de origen: %-15s\n", pRazas[i].idRaza, pRazas[i].descripcion, pRazas[i].paisOrigen);
+				printf("ID: %-10d Descripción: %-15s Pais de origen: %-15s\n", pRazas[i].idRaza, pRazas[i].descripcion, pRazas[i].paisOrigen);
 			}
 		}
 		retorno = 0;
@@ -130,7 +149,7 @@ int buscarIdRazas(Raza* pRazas, int limite, int id)
 {
 	int retorno = -1;
 
-	if(pRazas != NULL)
+	if(pRazas != NULL && limite > 0)
 	{
 		for(int i = 0; i < limite; i++)
 		{
@@ -143,4 +162,24 @@ int buscarIdRazas(Raza* pRazas, int limite, int id)
 	}
 
 	return retorno;
+}
+
+int buscarRazas(Raza* pRazas, int limite)
+{
+	int respuesta = -1;
+
+	if(pRazas != NULL && limite > 0)
+	{
+		for(int i = 0; i < limite; i ++)
+		{
+			if(!pRazas[i].isEmpty)
+			{
+				respuesta = 1;
+				break;
+			}
+			respuesta = 0;
+		}
+	}
+
+	return respuesta;
 }

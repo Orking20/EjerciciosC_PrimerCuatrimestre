@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "utn.h"
 #define TAM_ARRAY 4096
+#define TAM_PALABRA 1024
 #define TAM_NOMBRE 100
 #define TAM_DESCRIPCION 4096
 #define TAM_DNI 9
@@ -23,6 +24,9 @@
 #define TAM_TARJETA_CREDITO 20
 #define TAM_DIRECCION 64
 #define TAM_CADENA_MAYUSUCULAS 2024
+#define TAM_NOMBRE_ARCHIVO 64
+#define TAM_ESTADO_CIVIL 20
+#define TAM_SEXO 20
 
 int main(void)
 {
@@ -43,7 +47,12 @@ int main(void)
 	char tarjetaCredito[TAM_TARJETA_CREDITO];
 	char direccion[TAM_DIRECCION];
 	char textoMayusculas[TAM_CADENA_MAYUSUCULAS];
-	char textoMinusculas[TAM_CADENA_MAYUSUCULAS];*/
+	char textoMinusculas[TAM_CADENA_MAYUSUCULAS];
+	char palabra[TAM_PALABRA];*/
+	char nombreArchivo[TAM_NOMBRE_ARCHIVO];
+	char estadoCivil[TAM_ESTADO_CIVIL];
+	char sexo[TAM_SEXO];
+
 
 /*	if(utn_getNumero(&numero, "Ingrese un número positivo hasta el 1000: \n", "Error en los argumentos\n", -1000, 1000, 3) == 0)
 	{
@@ -133,7 +142,27 @@ int main(void)
 	if(utn_getCadenaMinusculas(textoMinusculas, TAM_CADENA_MAYUSUCULAS, "Ingrese un texto: \n", "Error.\n") == 0)
 	{
 		printf("%s\n", textoMinusculas);
+	}
+
+	if(utn_getPalabra(palabra, TAM_PALABRA, "Ingrese una palabra:\n", "Error. Esa no es una palabra\n") == 0)
+	{
+		printf("%s\n", palabra);
 	}*/
+
+	if(utn_getNombreArchivo(nombreArchivo, "Ingrese el nombre del archivo:\n", "Error. Ese nombre de archivo no es válido\n") == 0)
+	{
+		printf("%s\n", nombreArchivo);
+	}
+
+	if(utn_getEstadoCivil(estadoCivil, "Ingrese el estado civíl (soltero/casado/divorciado/viudo):\n", "Error. Ese estado civíl no es válido\n") == 0)
+	{
+		printf("%s\n", estadoCivil);
+	}
+
+	if(utn_getSexo(sexo, "Ingrese el sexo (masculino/femenino):\n", "Error. Ese sexo no es válido\n") == 0)
+	{
+		printf("%s\n", sexo);
+	}
 
 	return EXIT_SUCCESS;
 }

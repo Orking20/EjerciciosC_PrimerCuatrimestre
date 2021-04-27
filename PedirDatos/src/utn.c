@@ -24,6 +24,9 @@
 #define TAM_TARJETA_CREDITO 20
 #define TAM_DIRECCION 64
 #define TAM_DIRECCION_ALTURA 10
+#define TAM_NOMBRE_ARCHIVO 64
+#define TAM_ESTADO_CIVIL 20
+#define TAM_SEXO 20
 
 static int getInt(int *pResultado);
 static int getFloat(float *pResultado);
@@ -34,6 +37,7 @@ static int getMinusculas(char* cadena, int limite);
 
 static int validarEntero(char* cadena, int limite);
 static int validarDecimal(char* cadena, int limite);
+static int validarPalabra(char* cadena, int limite);
 static int validarNombre(char* cadena, int limite);
 static int validarDni(char* cadena, int limite);
 static int validarCuit(char* cadena, int limite);
@@ -46,6 +50,9 @@ static int validarSitioWeb(char* cadena, int limite);
 static int validarTarjetaCredito(char* cadena, int limite);
 static int validarDireccion(char* cadena, int limite);
 static int validarDireccionAltura(char* cadena, int limite);
+static int validarNombreArchivo(char* cadena, int limite);
+static int validarEstadoCivil(char* cadena, int limite);
+static int validarSexo(char* cadena, int limite);
 
 //--------------------------------OBTENCIÓN DE DATOS--------------------------------
 
@@ -149,6 +156,36 @@ int utn_getTexto(char* pString, int limite, char* pMensaje, char* pMensajeError)
 		printf("%s", pMensaje);
 		__fpurge(stdin);
 		if(getString(bufferString, sizeof(bufferString)) == 0)
+		{
+			strncpy(pString, bufferString, limite);
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Le pide al usuario que ingrese una palabra
+ * \param char* pString: Puntero donde se almacenará la palabra ingresada
+ * \param int limite: El limite o tamaño de la cadena
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
+ * \return Retorna 0 (EXITO) si se obtiene la palabra o -1 (ERROR) si no*/
+int utn_getPalabra(char* pString, int limite, char* pMensaje, char* pMensajeError)
+{
+	int retorno = -1;
+	char bufferString[1024];
+
+	if(pString != NULL && limite > 0 && pMensaje != NULL && pMensajeError != NULL)
+	{
+		printf("%s", pMensaje);
+		__fpurge(stdin);
+		if(getString(bufferString, sizeof(bufferString)) == 0 && validarPalabra(bufferString, sizeof(bufferString)))
 		{
 			strncpy(pString, bufferString, limite);
 			retorno = 0;
@@ -628,6 +665,93 @@ int utn_getDireccion(char* pDireccion, char* pMensaje, char* pMensajeAltura, cha
 }
 
 /**
+ * \brief Le pide al usuario que ingrese el nombre de un archivo
+ * \param char* pArchivo: Puntero donde se almacenará el nombre de archivo ingresado
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
+ * \return Retorna 0 (EXITO) si se obtiene el nombre del archivo o -1 (ERROR) si no*/
+int utn_getNombreArchivo(char* pArchivo, char* pMensaje, char* pMensajeError)
+{
+	int retorno = -1;
+	char bufferString[TAM_NOMBRE_ARCHIVO];
+
+	if(pArchivo != NULL && pMensaje != NULL && pMensajeError != NULL)
+	{
+		printf("%s", pMensaje);
+		__fpurge(stdin);
+		if(getString(bufferString, sizeof(bufferString)) == 0 && validarNombreArchivo(bufferString, sizeof(bufferString)) == 1)
+		{
+			strncpy(pArchivo, bufferString, TAM_NOMBRE_ARCHIVO);
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Le pide al usuario que ingrese un estado civíl
+ * \param char* pEstadoCivil: Puntero donde se almacenará el estado civíl ingresado
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
+ * \return Retorna 0 (EXITO) si se obtiene el estado civíl o -1 (ERROR) si no*/
+int utn_getEstadoCivil(char* pEstadoCivil, char* pMensaje, char* pMensajeError)
+{
+	int retorno = -1;
+	char bufferString[TAM_ESTADO_CIVIL];
+
+	if(pEstadoCivil != NULL && pMensaje != NULL && pMensajeError != NULL)
+	{
+		printf("%s", pMensaje);
+		__fpurge(stdin);
+		if(getString(bufferString, sizeof(bufferString)) == 0 && validarEstadoCivil(bufferString, sizeof(bufferString)) == 1)
+		{
+			strncpy(pEstadoCivil, bufferString, TAM_ESTADO_CIVIL);
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Le pide al usuario que ingrese un sexo (femenino o masculino)
+ * \param char* pSexo: Puntero donde se almacenará el sexo ingresado
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
+ * \return Retorna 0 (EXITO) si se obtiene el sexo o -1 (ERROR) si no*/
+int utn_getSexo(char* pSexo, char* pMensaje, char* pMensajeError)
+{
+	int retorno = -1;
+	char bufferString[TAM_SEXO];
+
+	if(pSexo != NULL && pMensaje != NULL && pMensajeError != NULL)
+	{
+		printf("%s", pMensaje);
+		__fpurge(stdin);
+		if(getString(bufferString, sizeof(bufferString)) == 0 && validarSexo(bufferString, sizeof(bufferString)) == 1)
+		{
+			strncpy(pSexo, bufferString, TAM_SEXO);
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
+		}
+	}
+
+	return retorno;
+}
+
+/**
  * \brief Transforma una cadena de caractéres a números del tipo int
  * \param int* pResultado: Puntero donde se almacenará el número ingresado
  * \return Retorna 0 (EXITO) si puede transformar la cadena o -1 (ERROR) si no*/
@@ -793,6 +917,35 @@ static int validarDecimal(char* cadena, int limite)
 				continue;
 			}
 			if(cadena[i] < '0' || cadena[i] > '9')
+			{
+				retorno = 0;
+				break;
+			}
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Valida que la cadena recibida contenga solo una palabra
+ * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
+ * \return Retorna 1 (verdadero) si la cadena es una palabra, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
+static int validarPalabra(char* cadena, int limite)
+{
+	int retorno = -1;
+
+	if(cadena != NULL && limite > 0)
+	{
+		retorno = 1;
+		for(int i = 0; i < limite && cadena[i] != '\0'; i++)
+		{
+			if((cadena[i] >= 'a' && cadena[i] <= 'z') || (cadena[i] >= 'A' && cadena[i] <= 'Z'))
+			{
+				continue;
+			}
+			else
 			{
 				retorno = 0;
 				break;
@@ -1199,7 +1352,6 @@ static int validarDireccionAltura(char* cadena, int limite)
 	if(cadena != NULL && limite > 0)
 	{
 		retorno = 1;
-		retorno = 1;
 		for(int i = 0; i < limite && cadena[i] != '\0'; i++)
 		{
 			if(cadena[i] < '0' || cadena[i] > '9')
@@ -1209,6 +1361,93 @@ static int validarDireccionAltura(char* cadena, int limite)
 			}
 		}
 		if(strlen(cadena) < 1 || strlen(cadena) > 4)
+		{
+			retorno = 0;
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Valida que la cadena recibida contenga un nombre de archivo válido
+ * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
+ * \return Retorna 1 (verdadero) si la cadena es un nombre de archivo, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
+static int validarNombreArchivo(char* cadena, int limite)
+{
+	int retorno = -1;
+	int punto = 0;
+
+	if(cadena != NULL && limite > 0)
+	{
+		retorno = 1;
+		for(int i = 0; i < limite && cadena[i] != '\0'; i++)
+		{
+			if((cadena[i] >= 'a' && cadena[i] <= 'z') || (cadena[i] >= 'A' && cadena[i] <= 'Z') || (cadena[i] >= '0' && cadena[i] <= '9') || cadena[i] == '-' || cadena[i] == '_')
+			{
+				retorno = 1;
+			}
+			else if(punto == 0 && cadena[strlen(cadena) - 4] == '.')
+			{
+				punto = 1;
+				retorno = 1;
+			}
+			else
+			{
+				retorno = 0;
+				break;
+			}
+		}
+		if(punto == 0)
+		{
+			retorno = 0;
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Valida que la cadena recibida contenga un estado civíl válido
+ * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
+ * \return Retorna 1 (verdadero) si la cadena es un estado civíl, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
+static int validarEstadoCivil(char* cadena, int limite)
+{
+	int retorno = -1;
+
+	if(cadena != NULL && limite > 0)
+	{
+		if(strcmp(cadena, "soltero") == 0 || strcmp(cadena, "casado") == 0 || strcmp(cadena, "divorciado") == 0 || strcmp(cadena, "viudo") == 0)
+		{
+			retorno = 1;
+		}
+		else
+		{
+			retorno = 0;
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Valida que la cadena recibida contenga un sexo
+ * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
+ * \return Retorna 1 (verdadero) si la cadena es un sexo, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
+static int validarSexo(char* cadena, int limite)
+{
+	int retorno = -1;
+
+	if(cadena != NULL && limite > 0)
+	{
+		if(strcmp(cadena, "masculino") == 0 || strcmp(cadena, "femenino") == 0)
+		{
+			retorno = 1;
+		}
+		else
 		{
 			retorno = 0;
 		}

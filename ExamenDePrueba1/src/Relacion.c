@@ -12,10 +12,9 @@
 #include "Mascotas.h"
 #include "Razas.h"
 #include "Relacion.h"
+#define LIMITE_MASCOTAS 10
 
 static int getPeso(Raza* pRazas, Mascota* pMascotas, int indice, int limiteRaza);
-static int buscarRazas(Raza* pRazas, int limite);
-static int buscarMascotas(Mascota* pMascota, int limite);
 
 int altaMascota(Mascota* pMascotas, Raza* pRazas, int indice, int limiteRazas)
 {
@@ -29,8 +28,8 @@ int altaMascota(Mascota* pMascotas, Raza* pRazas, int indice, int limiteRazas)
 		{
 			if(!utn_getNombre(bufferMascota.nombre, "Ingrese el nombre: \n", "Error. Ese no es un nombre válido\n") &&
 			   !utn_getEdad(&bufferMascota.edad, "Ingrese la edad: \n", "Error. Esa no es una edad válida\n") &&
-			   !utn_getNumero(&bufferMascota.sexo, "Ingrese el sexo (1.Femenino - 2.Masculino):\n", "Error. Solo puede ingresar (1.Femenino - 2.Masculino):\n", 1, 2, 5) &&
-			   !utn_getNumero(&bufferMascota.tipo, "Ingrese el tipo (1.Gato - 2.Perro - 3.Raro):\n", "Error. Solo puede ingresar (1.Gato - 2.Perro - 3.Raro):\n", 1, 3, 5))
+			   !utn_getCaracter(&bufferMascota.sexo, "Ingrese el sexo (1.Femenino - 2.Masculino):\n", "Error. Solo puede ingresar (1.Femenino - 2.Masculino):\n", 'a', 'z', 3) &&
+			   !utn_getTexto(bufferMascota.tipo, LIMITE_MASCOTAS, "Ingrese el tipo (1.Gato - 2.Perro - 3.Raro):\n", "Error. Solo puede ingresar (1.Gato - 2.Perro - 3.Raro):\n"))
 			{
 				mostrarRazas(pRazas, limiteRazas);
 				if(!utn_getNumero(&idRaza, "Ingrese el ID de la raza: \n", "Error. Ese ID es inválido\n", 1, 10, 3))
@@ -67,6 +66,63 @@ int altaMascota(Mascota* pMascotas, Raza* pRazas, int indice, int limiteRazas)
 	return retorno;
 }
 
+int modificarMascota(Mascota* pMascotas, Raza* pRazas, int limite)
+{
+	int retorno = -1;
+	Mascota bufferMascota;
+	int idRaza;
+	int id;
+
+	if(pMascotas != NULL && pRazas != NULL && limite > 0)
+	{
+		mostrarMascotasId(pMascotas, pRazas, LIMITE_MASCOTAS);
+		if(!utn_getNumero(&id, "Ingrese el ID de la mascota a modificar\n", "Error. Ese ID no existe\n", 1, 10, 3))
+		{
+			for(int i = 0; i < LIMITE_MASCOTAS; i++)
+			{
+				if(id == pMascotas[i].idMascota)
+				{
+					if(!utn_getNombre(bufferMascota.nombre, "Ingrese el nombre: \n", "Error. Ese no es un nombre válido\n") &&
+					   !utn_getEdad(&bufferMascota.edad, "Ingrese la edad: \n", "Error. Esa no es una edad válida\n") &&
+					   !utn_getCaracter(&bufferMascota.sexo, "Ingrese el sexo (1.Femenino - 2.Masculino):\n", "Error. Solo puede ingresar (1.Femenino - 2.Masculino):\n", 'a', 'z', 3) &&
+					   !utn_getTexto(bufferMascota.tipo, LIMITE_MASCOTAS, "Ingrese el tipo (1.Gato - 2.Perro - 3.Raro):\n", "Error. Solo puede ingresar (1.Gato - 2.Perro - 3.Raro):\n"))
+					{
+						mostrarRazas(pRazas, limite);
+						if(!utn_getNumero(&idRaza, "Ingrese el ID de la raza: \n", "Error. Ese ID es inválido\n", 1, 10, 3))
+						{
+							for(int j = 0; j < limite; j++)
+							{
+								if(idRaza == pRazas[j].idRaza)
+								{
+									bufferMascota.idRaza = idRaza;
+									bufferMascota.isEmpty = 0;
+									pMascotas[i] = bufferMascota;
+									retorno = 0;
+									break;
+								}
+								else
+								{
+									printf("No existe ninguna raza con ese ID\n");
+								}
+							}
+						}
+						if(retorno == -1)
+						{
+							printf("No existe ninguna raza con ese ID\n");
+						}
+					}
+					else
+					{
+						printf("Ingresaste un dato inválido.\n");
+					}
+				}
+			}
+		}
+	}
+
+	return retorno;
+}
+
 int borrarMascota(Mascota* pMascotas, Raza* pRazas, int limite)
 {
 	int retorno = -1;
@@ -87,10 +143,9 @@ int borrarMascota(Mascota* pMascotas, Raza* pRazas, int limite)
 					strncpy(pMascotas[i].nombre, "", sizeof(pMascotas[i].nombre));
 					pMascotas[i].edad = 0;
 					pMascotas[i].sexo = 0;
-					pMascotas[i].tipo = 0;
+					strncpy(pMascotas[i].tipo, "", sizeof(pMascotas[i].tipo));
 					pMascotas[i].isEmpty = 1;
 
-					//ordenarPorIsEmpty(pMascotas, limite);
 					ordenarPorPeso(pMascotas, pRazas, limite);
 					mostrarMascotas(pMascotas, pRazas, limite);
 					break;
@@ -110,14 +165,16 @@ int borrarMascota(Mascota* pMascotas, Raza* pRazas, int limite)
 int mostrarMascotas(Mascota* pMascotas, Raza* pRazas, int limite)
 {
 	int retorno = -1;
+	int indiceRaza;
 
 	if(pMascotas != NULL && pRazas != NULL && limite > 0)
 	{
 		for(int i = 0; i < limite; i++)
 		{
+			indiceRaza = buscarIdRazas(pRazas, limite, pMascotas[i].idRaza);
 			if(!pMascotas[i].isEmpty)
 			{
-				printf("Nombre: %-10s Edad: %-10d Sexo: %-10d Tipo: %-10d Raza: %-10s\n", pMascotas[i].nombre, pMascotas[i].edad, pMascotas[i].sexo, pMascotas[i].tipo, pRazas[i].descripcion);
+				printf("Nombre: %-10s Edad: %-10d Sexo: %-10c Tipo: %-10s Raza: %-10s\n", pMascotas[i].nombre, pMascotas[i].edad, pMascotas[i].sexo, pMascotas[i].tipo, pRazas[indiceRaza].descripcion);
 			}
 		}
 		retorno = 0;
@@ -136,38 +193,9 @@ int mostrarMascotasId(Mascota* pMascotas, Raza* pRazas, int limite)
 		{
 			if(!pMascotas[i].isEmpty)
 			{
-				printf("ID: %-10d Nombre: %-10s Edad: %-10d Sexo: %-10d Tipo: %-10d Raza: %-10s\n", pMascotas[i].idMascota, pMascotas[i].nombre, pMascotas[i].edad, pMascotas[i].sexo, pMascotas[i].tipo, pRazas[i].descripcion);
+				printf("ID: %-10d Nombre: %-10s Edad: %-10d Sexo: %-10c Tipo: %-10s Raza: %-10s\n", pMascotas[i].idMascota, pMascotas[i].nombre, pMascotas[i].edad, pMascotas[i].sexo, pMascotas[i].tipo, pRazas[i].descripcion);
 			}
 		}
-		retorno = 0;
-	}
-
-	return retorno;
-}
-
-int ordenarPorIsEmpty(Mascota* pMascotas, int limite)
-{
-	int retorno = -1;
-	int flagSwap = 0;
-	Mascota auxiliar;
-
-	if(pMascotas != NULL && limite > 0)
-	{
-		do
-		{
-			flagSwap = 0;
-			for(int i = 0; i < limite - 1; i++)
-			{
-				if(pMascotas[i].isEmpty > pMascotas[i + 1].isEmpty)
-				{
-					auxiliar = pMascotas[i];
-					pMascotas[i] = pMascotas[i + 1];
-					pMascotas[i + 1] = auxiliar;
-					flagSwap = 1;
-				}
-			}
-		}while(flagSwap);
-
 		retorno = 0;
 	}
 
@@ -179,6 +207,8 @@ int ordenarPorPeso(Mascota* pMascotas, Raza* pRazas, int limite)
 	int retorno = -1;
 	int flagSwap = 0;
 	Mascota auxiliar;
+	int peso1;
+	int peso2;
 
 	if(pMascotas != NULL && pRazas != NULL && limite > 0)
 	{
@@ -187,7 +217,9 @@ int ordenarPorPeso(Mascota* pMascotas, Raza* pRazas, int limite)
 			flagSwap = 0;
 			for(int i = 0; i < limite - 1; i++)
 			{
-				if(getPeso(pRazas, pMascotas, i, limite) > getPeso(pRazas, pMascotas, i + 1, limite))
+				peso1 = getPeso(pRazas, pMascotas, i, limite);
+				peso2 = getPeso(pRazas, pMascotas, i + 1, limite);
+				if(peso1 != -1 && peso2 != -1 && peso1 > peso2)
 				{
 					auxiliar = pMascotas[i];
 					pMascotas[i] = pMascotas[i + 1];
@@ -203,59 +235,42 @@ int ordenarPorPeso(Mascota* pMascotas, Raza* pRazas, int limite)
 	return retorno;
 }
 
-static int getPeso(Raza* pRazas, Mascota* pMascotas, int indice, int limiteRaza)
+int paisConMasMascotas(Mascota* pMascotas, Raza* pRazas, int limite, int cantPaises, int* pais)
 {
 	int retorno = -1;
-	int idRaza;
 	int indiceRaza;
+	int paisMaxMascotas = 0;
 
-	if(pRazas != NULL && pMascotas != NULL && indice >= 0 && limiteRaza > 0)
+	if(pMascotas != NULL && pRazas != NULL && limite > 0)
 	{
-		idRaza = pMascotas[indice].idRaza;
-		indiceRaza = buscarIdRazas(pRazas, limiteRaza, idRaza);
-
-		return pRazas[indiceRaza].tamanio;
+		for(int i = 0; i < limite; i++)
+		{
+			indiceRaza = buscarIdRazas(pRazas, limite, pMascotas[i].idRaza);
+			for(int j = 0; j < limite; i++)
+			{
+				if(pRazas[indiceRaza].paisOrigen == pRazas[j].paisOrigen)
+				{
+					paisMaxMascotas++;
+				}
+			}
+		}
+		retorno = 0;
 	}
 
 	return retorno;
 }
 
-static int buscarRazas(Raza* pRazas, int limite)
+static int getPeso(Raza* pRazas, Mascota* pMascotas, int indice, int limiteRaza)
 {
-	int respuesta = -1;
+	int retorno = -1;
+	int indiceRaza;
 
-	if(pRazas != NULL && limite > 0)
+	if(pRazas != NULL && pMascotas != NULL && indice >= 0 && limiteRaza > 0)
 	{
-		for(int i = 0; i < limite; i ++)
-		{
-			if(!pRazas[i].isEmpty)
-			{
-				respuesta = 1;
-				break;
-			}
-			respuesta = 0;
-		}
+		indiceRaza = buscarIdRazas(pRazas, limiteRaza, pMascotas[indice].idRaza);
+
+		return pRazas[indiceRaza].tamanio;
 	}
 
-	return respuesta;
-}
-
-static int buscarMascotas(Mascota* pMascota, int limite)
-{
-	int respuesta = -1;
-
-	if(pMascota != NULL && limite > 0)
-	{
-		for(int i = 0; i < limite; i ++)
-		{
-			if(!pMascota[i].isEmpty)
-			{
-				respuesta = 1;
-				break;
-			}
-			respuesta = 0;
-		}
-	}
-
-	return respuesta;
+	return retorno;
 }
