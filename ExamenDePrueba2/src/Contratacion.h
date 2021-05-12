@@ -20,8 +20,15 @@ typedef struct
 	int isEmpty;
 }Contratacion;
 
-int inicializarContratacion(Contratacion* pContratacion, int limite);
-int buscarIndiceVacioContratacion(Contratacion* pContratacion, int limite);
-int buscarContratacion(Contratacion* pContratacion, int limite);
+int contratacion_inicializar(Contratacion* pContratacion, int limite);
+int contratacion_buscarIndiceVacio(Contratacion* pContratacion, int limite);
+int contratacion_buscar(Contratacion* pContratacion, int limite);
+
+int getCantDias(Contratacion* pContrataciones, int indice, int* pCantDiasEncontrados);
+int setCantDias(Contratacion* pContrataciones, int indice, int* pCantDiasAGuardar);
+int getCuit(Contratacion* pContrataciones, int indice, char* pCuitEncontrado);
+int setCuit(Contratacion* pContrataciones, int indice, char* pCuitAGuardar);
+int getNombreArchivo(Contratacion* pContrataciones, int indice, char* pNombreArchivoEncontrado);
+int setNombreArchivo(Contratacion* pContrataciones, int indice, char* pNombreArchivoAGuardar);
 
 #endif /* CONTRATACION_H_ */

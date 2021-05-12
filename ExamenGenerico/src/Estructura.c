@@ -15,7 +15,7 @@
  * \param Automovil* pAutomovil: Cadena que contiene todas los automoviles y va a ser objetivo de la función
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) si pudo iniciar los valores o -1 (ERROR) si no*/
-int inicializarEstructura(Estructura* pEstructura, int limite)
+int estructura_inicializar(Estructura* pEstructura, int limite)
 {
 	int retorno = -1;
 
@@ -39,7 +39,7 @@ int inicializarEstructura(Estructura* pEstructura, int limite)
  * \param Automovil* pAutomovil: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora la posición más cercana al 0 que esté vacía o -1 si no hay posiciones vacías o si hubo un error*/
-int buscarIndiceVacioEstructura(Estructura* pEstructura, int limite)
+int estructura_buscarIndiceVacio(Estructura* pEstructura, int limite)
 {
 	int respuesta = -1;
 
@@ -63,7 +63,7 @@ int buscarIndiceVacioEstructura(Estructura* pEstructura, int limite)
  * \param Automovil* pAutomovil: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 1 si hay aunque sea un automovil, 0 si no hay ninguna o -1 en caso de error*/
-int buscarEstructura(Estructura* pEstructura, int limite)
+int estructura_buscar(Estructura* pEstructura, int limite)
 {
 	int respuesta = -1;
 

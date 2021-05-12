@@ -17,34 +17,34 @@
 #define CANT_AUTOMOVIL 1000
 
 /**
- * brief Pide al usuario que cargue los datos de un automovil
- * \param Automovil* pContratacion: Cadena donde se guardarán los datos
- * \param Propietario* pPropietario: Cadena para que se conecten los datos de una estructura con otra
+ * brief Pide al usuario que cargue los datos de una estructura
+ * \param Estructura* pEstructura: Cadena donde se guardarán los datos
+ * \param Estructura2* pEstructura2: Cadena para que se conecten los datos de una estructura con otra
  * \param int indice: La posición donde van a ser guardados los datos
- * \param int limiteProp: Limite de posiciones de propietarios
+ * \param int limiteEstruct2: Limite de posiciones de pEstructura2
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int altaContratacion(Estructura* pEstructura, Estructura2* pEstructura2, int indice, int limiteProp)
+int estructura_alta(Estructura* pEstructura, Estructura2* pEstructura2, int indice, int limiteEstruct2)
 {
 	int retorno = -1;
 	Estructura bufferEstructura;
-	int idPropietario;
+	int idEstruct2;
 
-	if(pEstructura != NULL && pEstructura2 != NULL && indice >= 0 && limiteProp > 0)
+	if(pEstructura != NULL && pEstructura2 != NULL && indice >= 0 && limiteEstruct2 > 0)
 	{
-		if(buscarEstructura2(pEstructura2, limiteProp) == 1)
+		if(estructura2_buscar(pEstructura2, limiteEstruct2) == 1)
 		{
-			mostrarEstructura2Id(pEstructura2, limiteProp);
-			if(!utn_getNumero(&idPropietario, "Ingrese el ID de la pantalla: \n", "Error. Ese ID es inválido\n", 1, CANT_PROPIETARIO, 3))
+			estructura2_mostrarConId(pEstructura2, limiteEstruct2);
+			if(!utn_getNumero(&idEstruct2, "Ingrese el ID de la pantalla: \n", "Error. Ese ID es inválido\n", 1, CANT_PROPIETARIO, 3))
 			{
-				if(!utn_getTexto(bufferEstructura.cadena, limiteProp, "Ingrese la patente\n", "Error. Esa patente es inválida\n") &&
-				   !utn_getNumero(&bufferEstructura.numero, "Ingrese la marca (1.Alpha Romeo - 2.Ferrari - 3.Audi - 4.Otro):\n", "Error. Solo puede ingresar (1.Alpha Romeo - 2.Ferrari - 3.Audi - 4.Otro)\n", 1, 4, 3))
+				if(!utn_getTexto(bufferEstructura.cadena, limiteEstruct2, "Ingrese la cadena:\n", "Error. La cadena no es válido\n") &&
+				   !utn_getNumero(&bufferEstructura.numero, "Ingrese un número:\n", "Error. Ese número es inválido\n", 1, 4, 3))
 				{
 
-					for(int i = 0; i < limiteProp; i++)
+					for(int i = 0; i < limiteEstruct2; i++)
 					{
-						if(idPropietario == pEstructura2[i].id)
+						if(idEstruct2 == pEstructura2[i].id)
 						{
-							bufferEstructura.id = idPropietario;
+							bufferEstructura.id = idEstruct2;
 							bufferEstructura.id = indice + 1;
 							bufferEstructura.isEmpty = 0;
 							pEstructura[indice] = bufferEstructura;
@@ -78,7 +78,7 @@ int altaContratacion(Estructura* pEstructura, Estructura2* pEstructura2, int ind
  * \param Propietario* pPropietario: Cadena para que se conecten los datos de una estructura con otra
  * \param int limite: Limite de posiciones de pAutomovil
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int modificarPropietario(Estructura* pEstructura, Estructura2* pEstructura2, int limiteAuto)
+int estructura_modificar(Estructura* pEstructura, Estructura2* pEstructura2, int limiteAuto)
 {
 	int retorno = -1;
 	int id;
@@ -88,7 +88,7 @@ int modificarPropietario(Estructura* pEstructura, Estructura2* pEstructura2, int
 
 	if(pEstructura != NULL && pEstructura2 != NULL && limiteAuto > 0)
 	{
-		if(buscarEstructura(pEstructura, limiteAuto) == 1)
+		if(estructura_buscar(pEstructura, limiteAuto) == 1)
 		{
 			if(!utn_getCuit(cuit, "Ingrese el CUIT del cliente\n", "Error. Ese CUIT es inválido\n"))
 			{
@@ -97,7 +97,7 @@ int modificarPropietario(Estructura* pEstructura, Estructura2* pEstructura2, int
 					if(strcmp(pEstructura[i].cadena, cuit) == 0)
 					{
 						flagCuit = 1;
-						indicePant = buscarIdEstructura2(pEstructura2, CANT_PROPIETARIO, pEstructura[i].id);
+						indicePant = estructura2_buscarPorId(pEstructura2, CANT_PROPIETARIO, pEstructura[i].id);
 						printf("ID: %-10d Nombre pantalla: %-10s Tipo: %-10s Dirección: %-15s Precio: %-10s\n", pEstructura2[indicePant].id, pEstructura2[indicePant].cadena, pEstructura2[indicePant].cadena, pEstructura2[indicePant].cadena, pEstructura2[indicePant].cadena);
 
 						if(!utn_getNumero(&id, "Ingrese el ID de la pantalla a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PROPIETARIO, 3))
@@ -148,7 +148,7 @@ int modificarPropietario(Estructura* pEstructura, Estructura2* pEstructura2, int
  * \param Contratacion* pContratacion: Cadena donde se borrarán las contrataciones relacionadas con la pantalla escogida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int bajaPantalla(Estructura2* pEstructura2, Estructura* pEstructura, int limitePant)
+int estructura2_baja(Estructura2* pEstructura2, Estructura* pEstructura, int limitePant)
 {
 	int retorno = -1;
 	int numeroId;
@@ -156,20 +156,20 @@ int bajaPantalla(Estructura2* pEstructura2, Estructura* pEstructura, int limiteP
 
 	if(pEstructura2 != NULL && pEstructura != NULL && limitePant > 0)
 	{
-		if(buscarEstructura2(pEstructura2, limitePant) == 1)
+		if(estructura2_buscar(pEstructura2, limitePant) == 1)
 		{
-			mostrarEstructura2Id(pEstructura2, limitePant);
+			estructura2_mostrarConId(pEstructura2, limitePant);
 			if(!utn_getNumero(&numeroId, "Ingrese el ID de la pantalla a eliminar: \n", "Error. Ese ID no es válido\n", 1, CANT_PROPIETARIO, 3))
 			{
 				for(int i = 0; i < limitePant; i++)
 				{
 					if(numeroId == pEstructura2[i].id)
 					{
-						if(buscarEstructura(pEstructura, CANT_AUTOMOVIL) == 1)
+						if(estructura_buscar(pEstructura, CANT_AUTOMOVIL) == 1)
 						{
 							for(int j = 0; j < CANT_AUTOMOVIL; j++)
 							{
-								indice = buscarIdEstructura2(pEstructura2, limitePant, pEstructura[j].id);
+								indice = estructura2_buscarPorId(pEstructura2, limitePant, pEstructura[j].id);
 								if(numeroId == pEstructura[indice].id)
 								{
 									pEstructura[indice].id = 0;
@@ -215,7 +215,7 @@ int bajaPantalla(Estructura2* pEstructura2, Estructura* pEstructura, int limiteP
  * \param Contratacion* pContratacion: Cadena donde se borrarán los datos
  * \param int limiteCont: Limite de posiciones de contrataciones
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int borrarEstructura(Estructura* pEstructura, Estructura2* pEstructura2, int limiteCont)
+int estructura_borrar(Estructura* pEstructura, Estructura2* pEstructura2, int limiteCont)
 {
 	int retorno = -1;
 	int id;
@@ -226,7 +226,7 @@ int borrarEstructura(Estructura* pEstructura, Estructura2* pEstructura2, int lim
 
 	if(pEstructura != NULL && pEstructura2 != NULL && limiteCont > 0)
 	{
-		if(buscarEstructura(pEstructura, limiteCont) == 1)
+		if(estructura_buscar(pEstructura, limiteCont) == 1)
 		{
 			if(!utn_getCuit(cuit, "Ingrese el CUIT del cliente\n", "Error. Ese CUIT es inválido\n"))
 			{
@@ -235,7 +235,7 @@ int borrarEstructura(Estructura* pEstructura, Estructura2* pEstructura2, int lim
 					if(strcmp(pEstructura[i].cadena, cuit) == 0)
 					{
 						flagCuit = 1;
-						indicePant = buscarIdEstructura2(pEstructura2, CANT_PROPIETARIO, pEstructura[i].id);
+						indicePant = estructura2_buscarPorId(pEstructura2, CANT_PROPIETARIO, pEstructura[i].id);
 						printf("ID: %-10d Nombre pantalla: %-10s Tipo: %-10s Dirección: %-15s Precio: %-10s\n", pEstructura2[indicePant].id, pEstructura2[indicePant].cadena, pEstructura2[indicePant].cadena, pEstructura2[indicePant].cadena, pEstructura2[indicePant].cadena);
 
 						if(!utn_getNumero(&id, "Ingrese el ID de la pantalla a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PROPIETARIO, 3))
@@ -291,7 +291,7 @@ int consultaFacturacion(Estructura* pEstructura, Estructura2* pEstructura2, int 
 
 	if(pEstructura != NULL && pEstructura2 != NULL && limiteCont > 0)
 	{
-		if(buscarEstructura(pEstructura, limiteCont) == 1)
+		if(estructura_buscar(pEstructura, limiteCont) == 1)
 		{
 			if(!utn_getCuit(cuit, "Ingrese el CUIT del cliente\n", "Error. Ese CUIT es inválido\n"))
 			{
@@ -300,7 +300,7 @@ int consultaFacturacion(Estructura* pEstructura, Estructura2* pEstructura2, int 
 					if(strcmp(pEstructura[i].cadena, cuit) == 0)
 					{
 						flagCuit = 1;
-						indicePant = buscarIdEstructura2(pEstructura2, CANT_PROPIETARIO, pEstructura[i].id);
+						indicePant = estructura2_buscarPorId(pEstructura2, CANT_PROPIETARIO, pEstructura[i].id);
 						printf("Nombre archivo: %-10s Precio por día: %-10.2s\n", pEstructura[i].cadena, pEstructura2[indicePant].cadena);
 					}
 				}
@@ -325,7 +325,7 @@ int consultaFacturacion(Estructura* pEstructura, Estructura2* pEstructura2, int 
  * \param Pantalla* pPantalla: Cadena que sirve solo para mostrar el nombre de la pantalla que está en otra estructura
  * \param int limite: Limite o tamaño de la cadena pContratacion
  * \return Retora 0 (EXITO) o -1 (ERROR)*/
-int mostrarEstructura(Estructura* pEstructura, Estructura2* pEstructura2, int limite)
+int estructura_mostrar(Estructura* pEstructura, Estructura2* pEstructura2, int limite)
 {
 	int retorno = -1;
 	int indicePant;
@@ -334,7 +334,7 @@ int mostrarEstructura(Estructura* pEstructura, Estructura2* pEstructura2, int li
 	{
 		for(int i = 0; i < limite; i++)
 		{
-			indicePant = buscarIdEstructura2(pEstructura2, limite, pEstructura[i].id);
+			indicePant = estructura2_buscarPorId(pEstructura2, limite, pEstructura[i].id);
 			if(!pEstructura[i].isEmpty)
 			{
 				printf("Nombre pantalla: %-10s Nombre archivo: %-10s Cantidad días: %-10s CUIT: %-15s\n", pEstructura2[indicePant].cadena, pEstructura[i].cadena, pEstructura[i].cadena, pEstructura[i].cadena);
@@ -352,7 +352,7 @@ int mostrarEstructura(Estructura* pEstructura, Estructura2* pEstructura2, int li
  * \param Pantalla* pPantalla: Cadena que sirve solo para mostrar el nombre de la pantalla que está en otra estructura
  * \param int limite: Limite o tamaño de la cadena pContratacion
  * \return Retora 0 (EXITO) o -1 (ERROR)*/
-int mostrarEstructuraId(Estructura* pEstructura, Estructura2* pEstructura2, int limite)
+int estructura_mostrarConId(Estructura* pEstructura, Estructura2* pEstructura2, int limite)
 {
 	int retorno = -1;
 

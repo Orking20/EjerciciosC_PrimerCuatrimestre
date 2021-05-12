@@ -27,6 +27,7 @@
 #define TAM_NOMBRE_ARCHIVO 64
 #define TAM_ESTADO_CIVIL 20
 #define TAM_SEXO 20
+#define TAM_RESPUESTA 3
 
 int main(void)
 {
@@ -48,10 +49,11 @@ int main(void)
 	char direccion[TAM_DIRECCION];
 	char textoMayusculas[TAM_CADENA_MAYUSUCULAS];
 	char textoMinusculas[TAM_CADENA_MAYUSUCULAS];
-	char palabra[TAM_PALABRA];*/
+	char palabra[TAM_PALABRA];
 	char nombreArchivo[TAM_NOMBRE_ARCHIVO];
 	char estadoCivil[TAM_ESTADO_CIVIL];
-	char sexo[TAM_SEXO];
+	char sexo[TAM_SEXO];*/
+	char respuesta[TAM_RESPUESTA];
 
 
 /*	if(utn_getNumero(&numero, "Ingrese un número positivo hasta el 1000: \n", "Error en los argumentos\n", -1000, 1000, 3) == 0)
@@ -147,7 +149,7 @@ int main(void)
 	if(utn_getPalabra(palabra, TAM_PALABRA, "Ingrese una palabra:\n", "Error. Esa no es una palabra\n") == 0)
 	{
 		printf("%s\n", palabra);
-	}*/
+	}
 
 	if(utn_getNombreArchivo(nombreArchivo, "Ingrese el nombre del archivo:\n", "Error. Ese nombre de archivo no es válido\n") == 0)
 	{
@@ -162,6 +164,11 @@ int main(void)
 	if(utn_getSexo(sexo, "Ingrese el sexo (masculino/femenino):\n", "Error. Ese sexo no es válido\n") == 0)
 	{
 		printf("%s\n", sexo);
+	}*/
+
+	if(utn_getRespuestaSiNo(respuesta, "Ingrese una respuesta (si/no):\n", "Error. Solo puede ingresar si o no\n"))
+	{
+		printf("%s\n", respuesta);
 	}
 
 	return EXIT_SUCCESS;

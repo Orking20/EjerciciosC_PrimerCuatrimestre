@@ -19,7 +19,7 @@
  * \param Propietario* pPropietario: Cadena que contiene todos los propietario y va a ser objetivo de la función
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) si pudo iniciar los valores o -1 (ERROR) si no*/
-int inicializarEstructura2(Estructura2* pEstructura2, int limite)
+int estructura2_inicializar(Estructura2* pEstructura2, int limite)
 {
 	int retorno = -1;
 
@@ -44,16 +44,16 @@ int inicializarEstructura2(Estructura2* pEstructura2, int limite)
  * \param Propietario* pPropietario: Cadena donde se guardarán los valores
  * \param int indice: La posición donde van a ser guardados los datos
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int altaEstructura2(Estructura2* pEstructura2, int indice)
+int estructura2_alta(Estructura2* pEstructura2, int indice)
 {
 	int retorno = -1;
 	Estructura2 bufferEstructura2;
 
 	if(pEstructura2 != NULL && indice >= 0)
 	{
-		if(!utn_getTexto(bufferEstructura2.cadena, TAM_Y, "Ingrese el nombre y apellido:\n", "Error. El nombre y apellido no es válido\n") &&
-		   !utn_getDireccion(bufferEstructura2.cadena, "Ingrese la dirección (sin la altura): \n", "Ingrese la altura: \n", "Error. Esa no es una dirección válida\n", "Error. Esa no es una altura válida\n") &&
-		   !utn_getTarjetaCredito(bufferEstructura2.cadena, "Ingrese el número de tarjeta de crédito:\n", "Error. Ese número de tarjeta de crédito no es válido\n"))
+		if(!utn_getTexto(bufferEstructura2.cadena, TAM_Y, "Ingrese la cadena:\n", "Error. La cadena no es válido\n") &&
+		   !utn_getDireccion(bufferEstructura2.cadena, "Ingrese la cadena:\n", "Ingrese la cadena:\n", "Error. La cadena no es válido\n", "Error. La cadena no es válido\n") &&
+		   !utn_getTarjetaCredito(bufferEstructura2.cadena, "Ingrese la cadena:\n", "Error. La cadena no es válido\n"))
 		{
 			bufferEstructura2.id = indice + 1;
 			bufferEstructura2.isEmpty = 0;
@@ -74,7 +74,7 @@ int altaEstructura2(Estructura2* pEstructura2, int indice)
  * \param Propietario* pPropietario: Cadena donde se guardarán los nuevos valores
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int modificarEstructura2(Estructura2* pEstructura2, int limite)
+int estructura2_modificar(Estructura2* pEstructura2, int limite)
 {
 	int retorno = -1;
 	Estructura2 bufferEstructura2;
@@ -82,16 +82,16 @@ int modificarEstructura2(Estructura2* pEstructura2, int limite)
 
 	if(pEstructura2 != NULL && limite > 0)
 	{
-		mostrarEstructura2Id(pEstructura2, limite);
-		if(!utn_getNumero(&id, "Ingrese el ID del propietario a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PROPIETARIO, 3))
+		estructura2_mostrarConId(pEstructura2, limite);
+		if(!utn_getNumero(&id, "Ingrese el ID de la estructrua2 a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PROPIETARIO, 3))
 		{
 			for(int i = 0; i < CANT_PROPIETARIO; i++)
 			{
 				if(id == pEstructura2[i].id)
 				{
-					if(!utn_getTexto(bufferEstructura2.cadena, TAM_Y, "Ingrese el nombre y apellido: \n", "Error. Ese no es un nombre y apellido válido\n") &&
-					   !utn_getDireccion(bufferEstructura2.cadena, "Ingrese la dirección (sin la altura): \n", "Ingrese la altura: \n", "Error. Esa no es una dirección válida\n", "Error. Esa no es una altura válida\n") &&
-					   !utn_getTarjetaCredito(bufferEstructura2.cadena, "Ingrese el número de tarjeta de crédito:\n", "Error. Ese número de tarjeta de crédito no es válido\n"))
+					if(!utn_getTexto(bufferEstructura2.cadena, TAM_Y, "Ingrese la cadena:\n", "Error. La cadena no es válido\n") &&
+					   !utn_getDireccion(bufferEstructura2.cadena, "Ingrese la cadena:\n", "Ingrese la cadena:\n", "Error. La cadena no es válido\n", "Error. La cadena no es válido\n") &&
+					   !utn_getTarjetaCredito(bufferEstructura2.cadena, "Ingrese la cadena:\n", "Error. La cadena no es válido\n"))
 					{
 						bufferEstructura2.isEmpty = 0;
 						pEstructura2[i] = bufferEstructura2;
@@ -111,7 +111,7 @@ int modificarEstructura2(Estructura2* pEstructura2, int limite)
  * \param Pantalla* pPantalla: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int mostrarEstructura2(Estructura2* pEstructura2, int limite)
+int estructura2_mostrar(Estructura2* pEstructura2, int limite)
 {
 	int retorno = -1;
 
@@ -121,7 +121,7 @@ int mostrarEstructura2(Estructura2* pEstructura2, int limite)
 		{
 			if(!pEstructura2[i].isEmpty)
 			{
-				printf("Nombre y apellido: %-15s Dirección: %-10s Número de tarjeta: %-15s\n", pEstructura2[i].cadena, pEstructura2[i].cadena, pEstructura2[i].cadena);
+				printf("Cadena: %-15s Cadena: %-15s Cadena: %-15s\n", pEstructura2[i].cadena, pEstructura2[i].cadena, pEstructura2[i].cadena);
 			}
 		}
 		retorno = 0;
@@ -135,7 +135,7 @@ int mostrarEstructura2(Estructura2* pEstructura2, int limite)
  * \param Pantalla* pPantalla: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int mostrarEstructura2Id(Estructura2* pEstructura2, int limite)
+int estructura2_mostrarConId(Estructura2* pEstructura2, int limite)
 {
 	int retorno = -1;
 
@@ -145,7 +145,7 @@ int mostrarEstructura2Id(Estructura2* pEstructura2, int limite)
 		{
 			if(!pEstructura2[i].isEmpty)
 			{
-				printf("ID: %-10d Nombre: %-15s Dirección: %-10s Número de tarjeta: %-15s\n", pEstructura2[i].id, pEstructura2[i].cadena, pEstructura2[i].cadena, pEstructura2[i].cadena);
+				printf("ID: %-10d Cadena: %-15s Cadena: %-10s Cadena: %-15s\n", pEstructura2[i].id, pEstructura2[i].cadena, pEstructura2[i].cadena, pEstructura2[i].cadena);
 			}
 		}
 		retorno = 0;
@@ -187,7 +187,7 @@ int mostrarEstructura2Id(Estructura2* pEstructura2, int limite)
  * \param Propietario* pPropietario: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora la posición más cercana al 0 que esté vacía o -1 si no hay posiciones vacías o si hubo un error*/
-int buscarIndiceVacioEstructura2(Estructura2* pEstructura2, int limite)
+int estructura2_buscarIndiceVacio(Estructura2* pEstructura2, int limite)
 {
 	int respuesta = -1;
 
@@ -212,7 +212,7 @@ int buscarIndiceVacioEstructura2(Estructura2* pEstructura2, int limite)
  * \param int limite: Limite o tamaño de la cadena
  * \param int id: ID que va a ser comparado con el ID de Pantalla
  * \return Retora la posición donde los IDs sean iguales o -1 en caso de error*/
-int buscarIdEstructura2(Estructura2* pEstructura2, int limite, int idArgumento)
+int estructura2_buscarPorId(Estructura2* pEstructura2, int limite, int idArgumento)
 {
 	int retorno = -1;
 
@@ -236,7 +236,7 @@ int buscarIdEstructura2(Estructura2* pEstructura2, int limite, int idArgumento)
  * \param Propietario* pPropietario: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 1 si hay aunque sea un propietario, 0 si no hay ninguna o -1 en caso de error*/
-int buscarEstructura2(Estructura2* pEstructura2, int limite)
+int estructura2_buscar(Estructura2* pEstructura2, int limite)
 {
 	int respuesta = -1;
 

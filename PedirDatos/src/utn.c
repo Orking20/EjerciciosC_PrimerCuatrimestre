@@ -27,6 +27,7 @@
 #define TAM_NOMBRE_ARCHIVO 64
 #define TAM_ESTADO_CIVIL 20
 #define TAM_SEXO 20
+#define TAM_RESPUESTA 3
 
 static int getInt(int *pResultado);
 static int getFloat(float *pResultado);
@@ -53,6 +54,7 @@ static int validarDireccionAltura(char* cadena, int limite);
 static int validarNombreArchivo(char* cadena, int limite);
 static int validarEstadoCivil(char* cadena, int limite);
 static int validarSexo(char* cadena, int limite);
+static int validarRespuestaSiNo(char* cadena, int limite);
 
 //--------------------------------OBTENCIÓN DE DATOS--------------------------------
 
@@ -740,6 +742,35 @@ int utn_getSexo(char* pSexo, char* pMensaje, char* pMensajeError)
 		if(getString(bufferString, sizeof(bufferString)) == 0 && validarSexo(bufferString, sizeof(bufferString)) == 1)
 		{
 			strncpy(pSexo, bufferString, TAM_SEXO);
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s", pMensajeError);
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Le pide al usuario que ingrese una respuesta (si o no)
+ * \param char* pRespuesta: Puntero donde se almacenará la respuesta ingresada
+ * \param char* pMensaje: Texto para que el usuario sepa que ingresar
+ * \param char* pMensajeError: Texto que nos informa de un error
+ * \return Retorna 0 (EXITO) si se obtiene la respuesta o -1 (ERROR) si no*/
+int utn_getRespuestaSiNo(char* pRespuesta, char* pMensaje, char* pMensajeError)
+{
+	int retorno = -1;
+	char bufferString[TAM_RESPUESTA];
+
+	if(pRespuesta != NULL && pMensaje != NULL && pMensajeError != NULL)
+	{
+		printf("%s", pMensaje);
+		__fpurge(stdin);
+		if(getString(bufferString, sizeof(bufferString)) == 0 && validarRespuestaSiNo(bufferString, sizeof(bufferString)) == 1)
+		{
+			strncpy(pRespuesta, bufferString, TAM_RESPUESTA);
 			retorno = 0;
 		}
 		else
@@ -1444,6 +1475,30 @@ static int validarSexo(char* cadena, int limite)
 	if(cadena != NULL && limite > 0)
 	{
 		if(strcmp(cadena, "masculino") == 0 || strcmp(cadena, "femenino") == 0)
+		{
+			retorno = 1;
+		}
+		else
+		{
+			retorno = 0;
+		}
+	}
+
+	return retorno;
+}
+
+/**
+ * \brief Valida que la cadena recibida contenga una respuesta de si o no
+ * \param char* cadena: Cadena de caracteres a ser analizada
+ * \param int limite: El limite o tamaño de la cadena
+ * \return Retorna 1 (verdadero) si la cadena es una respuesta, 0 (falso) si no o -1 si hubo algún error con los argumentos*/
+static int validarRespuestaSiNo(char* cadena, int limite)
+{
+	int retorno = -1;
+
+	if(cadena != NULL && limite > 0)
+	{
+		if(strcmp(cadena, "si") == 0 || strcmp(cadena, "no") == 0)
 		{
 			retorno = 1;
 		}

@@ -8,15 +8,16 @@
 #ifndef RELACION_H_
 #define RELACION_H_
 
-int altaContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int indice, int limiteRazas);
-int modificarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont);
-int bajaPantalla(Pantalla* pPantalla, Contratacion* pContratacion, int limitePant);
-int borrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
+int contratacion_alta(Contratacion* pContratacion, Pantalla* pPantalla, int indice, int limiteRazas);
+int contratacion_modificar(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont);
+int pantalla_baja(Pantalla* pPantalla, Contratacion* pContratacion, int limitePant);
+int contratacion_borrar(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
 int consultaFacturacion(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont);
 
-int mostrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
-int mostrarContratacionId(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
+int contratacion_mostrar(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
+int contratacion_mostrarConId(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
+int contratacion_buscarId(Contratacion* pContratacion, int limite, int id);
+
 int ordenarPorPeso(Contratacion* pContratacion, Pantalla* pPantalla, int limite);
-int buscarIdContratacion(Contratacion* pContratacion, int limite, int id);
 
 #endif /* RELACION_H_ */

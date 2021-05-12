@@ -18,8 +18,8 @@ typedef struct
 	int isEmpty;
 }Estructura;
 
-int inicializarEstructura(Estructura* pEstructuras, int limite);
-int buscarIndiceVacioEstructura(Estructura* pAEstructuras, int limite);
-int buscarEstructura(Estructura* pEstructuras, int limite);
+int estructura_inicializar(Estructura* pEstructuras, int limite);
+int estructura_buscarIndiceVacio(Estructura* pAEstructuras, int limite);
+int estructura_buscar(Estructura* pEstructuras, int limite);
 
 #endif /* ESTRUCTURA_H_ */

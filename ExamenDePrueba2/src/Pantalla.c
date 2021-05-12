@@ -18,7 +18,7 @@
  * \param Pantalla* pPantalla: Cadena que contiene todas las pantallas y va a ser objetivo de la función
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) si pudo iniciar los valores o -1 (ERROR) si no*/
-int inicializarPantalla(Pantalla* pPantalla, int limite)
+int pantalla_inicializar(Pantalla* pPantalla, int limite)
 {
 	int retorno = -1;
 
@@ -44,7 +44,7 @@ int inicializarPantalla(Pantalla* pPantalla, int limite)
  * \param Pantalla* pPantalla: Cadena donde se guardarán los valores
  * \param int indice: La posición donde van a ser guardados los datos
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int altaPantalla(Pantalla* pPantalla, int indice)
+int pantalla_alta(Pantalla* pPantalla, int indice)
 {
 	int retorno = -1;
 	Pantalla bufferPantalla;
@@ -76,7 +76,7 @@ int altaPantalla(Pantalla* pPantalla, int indice)
  * \param Pantalla* pPantalla: Cadena donde se guardarán los nuevos valores
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int modificarPantalla(Pantalla* pPantalla, int limite)
+int pantalla_modificar(Pantalla* pPantalla, int limite)
 {
 	int retorno = -1;
 	Pantalla bufferPantalla;
@@ -84,14 +84,14 @@ int modificarPantalla(Pantalla* pPantalla, int limite)
 
 	if(pPantalla != NULL && limite > 0)
 	{
-		mostrarPantallaId(pPantalla, limite);
+		pantalla_mostrarConId(pPantalla, limite);
 		if(!utn_getNumero(&id, "Ingrese el ID de la pantalla a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PANTALLAS, 3))
 		{
 			for(int i = 0; i < CANT_PANTALLAS; i++)
 			{
 				if(id == pPantalla[i].idPantalla)
 				{
-					if(!utn_getTexto(bufferPantalla.nombre, TAM_DESCRIPCION, "Ingrese el nombre del archivo: \n", "Error. Ese no es un nombre de archivo válido\n") &&
+					if(!utn_getTexto(bufferPantalla.nombre, TAM_DESCRIPCION, "Ingrese el nombre: \n", "Error. Ese no es un nombre válido\n") &&
 					   !utn_getPrecio(&bufferPantalla.precioPorDia, "Ingrese el precio por día:\n", "Error. Ese precio no es válido\n") &&
 					   !utn_getDireccion(bufferPantalla.direccion, "Ingrese la dirección (sin la altura): \n", "Ingrese la altura: \n", "Error. Esa no es una dirección válida\n", "Error. Esa no es una altura válida\n") &&
 					   !utn_getTexto(bufferPantalla.tipo, TAM_TIPO, "Ingrese el tipo (LCD/LED):\n", "Error. Ese tipo no es válido\n") &&
@@ -115,7 +115,7 @@ int modificarPantalla(Pantalla* pPantalla, int limite)
  * \param Pantalla* pPantalla: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int mostrarPantalla(Pantalla* pPantalla, int limite)
+int pantalla_mostrar(Pantalla* pPantalla, int limite)
 {
 	int retorno = -1;
 
@@ -139,7 +139,7 @@ int mostrarPantalla(Pantalla* pPantalla, int limite)
  * \param Pantalla* pPantalla: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int mostrarPantallaId(Pantalla* pPantalla, int limite)
+int pantalla_mostrarConId(Pantalla* pPantalla, int limite)
 {
 	int retorno = -1;
 
@@ -191,7 +191,7 @@ int mostrarPantallaId(Pantalla* pPantalla, int limite)
  * \param Pantalla* pPantalla: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora la posición más cercana al 0 que esté vacía o -1 si no hay posiciones vacías o si hubo un error*/
-int buscarIndiceVacioPantalla(Pantalla* pPantalla, int limite)
+int pantalla_buscarIndiceVacio(Pantalla* pPantalla, int limite)
 {
 	int respuesta = -1;
 
@@ -216,7 +216,7 @@ int buscarIndiceVacioPantalla(Pantalla* pPantalla, int limite)
  * \param int limite: Limite o tamaño de la cadena
  * \param int id: ID que va a ser comparado con el ID de Pantalla
  * \return Retora la posición donde los IDs sean iguales o -1 en caso de error*/
-int buscarIdPantalla(Pantalla* pPantalla, int limite, int id)
+int pantalla_buscarId(Pantalla* pPantalla, int limite, int id)
 {
 	int retorno = -1;
 
@@ -240,7 +240,7 @@ int buscarIdPantalla(Pantalla* pPantalla, int limite, int id)
  * \param Pantalla* pPantalla: Cadena que va a ser recorrida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 1 si hay aunque sea una pantalla, 0 si no hay ninguna o -1 en caso de error*/
-int buscarPantalla(Pantalla* pPantalla, int limite)
+int pantalla_buscar(Pantalla* pPantalla, int limite)
 {
 	int respuesta = -1;
 

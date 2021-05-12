@@ -24,44 +24,55 @@ int main(void)
 	Contratacion arrayContrataciones[CANT_CONTRATACIONES];
 	int opcionMenu;
 
-	inicializarPantalla(arrayPantallas, CANT_PANTALLAS);
-	inicializarContratacion(arrayContrataciones, CANT_CONTRATACIONES);
+	pantalla_inicializar(arrayPantallas, CANT_PANTALLAS);
+	contratacion_inicializar(arrayContrataciones, CANT_CONTRATACIONES);
 
 	do
 	{
-		utn_getNumero(&opcionMenu, "\n1) Cargar pantalla\n2) Modificar pantalla\n3) Borrar pantalla\n4) Contratar publicidad\n5) Modificar condiciones de publicacion\n6) Cancelar contratación\n7) Listar pagos\n8) Listar contrataciones\n9) Listar pantallas\n10) Informe\n11) Salir\n", "Error. Ingrese un número de los del menú\n", 1, 11, 3);
+		utn_getNumero(&opcionMenu,  "\n1) Cargar pantalla"
+									"\n2) Modificar pantalla"
+									"\n3) Borrar pantalla"
+									"\n4) Contratar publicidad"
+									"\n5) Modificar condiciones de publicacion"
+									"\n6) Cancelar contratación"
+									"\n7) Listar pagos"
+									"\n8) Listar contrataciones"
+									"\n9) Listar pantallas"
+									"\n10) Informe"
+									"\n11) Salir\n",
+									"Error. Ingrese un número de los del menú\n", 1, 11, 3);
 
 		switch(opcionMenu)
 		{
 			case 1:
 			{
-				altaPantalla(arrayPantallas, buscarIndiceVacioPantalla(arrayPantallas, CANT_PANTALLAS));
+				pantalla_alta(arrayPantallas, pantalla_buscarIndiceVacio(arrayPantallas, CANT_PANTALLAS));
 				break;
 			}
 			case 2:
 			{
-				modificarPantalla(arrayPantallas, CANT_PANTALLAS);
+				pantalla_modificar(arrayPantallas, CANT_PANTALLAS);
 
 				break;
 			}
 			case 3:
 			{
-				bajaPantalla(arrayPantallas, arrayContrataciones, CANT_PANTALLAS);
+				pantalla_baja(arrayPantallas, arrayContrataciones, CANT_PANTALLAS);
 				break;
 			}
 			case 4:
 			{
-				altaContratacion(arrayContrataciones, arrayPantallas, buscarIndiceVacioContratacion(arrayContrataciones, CANT_CONTRATACIONES), CANT_PANTALLAS);
+				contratacion_alta(arrayContrataciones, arrayPantallas, contratacion_buscarIndiceVacio(arrayContrataciones, CANT_CONTRATACIONES), CANT_PANTALLAS);
 				break;
 			}
 			case 5:
 			{
-				modificarContratacion(arrayContrataciones, arrayPantallas, CANT_CONTRATACIONES);
+				contratacion_modificar(arrayContrataciones, arrayPantallas, CANT_CONTRATACIONES);
 				break;
 			}
 			case 6:
 			{
-				borrarContratacion(arrayContrataciones, arrayPantallas, CANT_CONTRATACIONES);
+				contratacion_borrar(arrayContrataciones, arrayPantallas, CANT_CONTRATACIONES);
 				break;
 			}
 			case 7:
@@ -71,13 +82,13 @@ int main(void)
 			}
 			case 8:
 			{
-				mostrarContratacion(arrayContrataciones, arrayPantallas, CANT_CONTRATACIONES);
+				contratacion_mostrar(arrayContrataciones, arrayPantallas, CANT_CONTRATACIONES);
 				//listarContrataciones();
 				break;
 			}
 			case 9:
 			{
-				mostrarPantalla(arrayPantallas, CANT_PANTALLAS);
+				pantalla_mostrar(arrayPantallas, CANT_PANTALLAS);
 				break;
 			}
 			case 10:

@@ -18,14 +18,14 @@ typedef struct
 	int isEmpty;
 }Estructura2;
 
-int inicializarEstructura2(Estructura2* pEstructura2, int limite);
-int altaEstructura2(Estructura2* pEstructura2, int indice);
-int modificarEstructura2(Estructura2* pEstructura2, int limite);
-int mostrarEstructura2(Estructura2* pEstructura2, int limite);
-int mostrarEstructura2Id(Estructura2* pEstructura2, int limite);
+int estructura2_inicializar(Estructura2* pEstructura2, int limite);
+int estructura2_alta(Estructura2* pEstructura2, int indice);
+int estructura2_modificar(Estructura2* pEstructura2, int limite);
+int estructura2_mostrar(Estructura2* pEstructura2, int limite);
+int estructura2_mostrarConId(Estructura2* pEstructura2, int limite);
 
-int buscarIndiceVacioEstructura2(Estructura2* pEstructura2, int limite);
-int buscarIdEstructura2(Estructura2* pEstructura2, int limite, int id);
-int buscarEstructura2(Estructura2* pEstructura2, int limite);
+int estructura2_buscarIndiceVacio(Estructura2* pEstructura2, int limite);
+int estructura2_buscarPorId(Estructura2* pEstructura2, int limite, int id);
+int estructura2_buscar(Estructura2* pEstructura2, int limite);
 
 #endif /* ESTRUCTURA2_H_ */

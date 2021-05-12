@@ -21,15 +21,14 @@ typedef struct
 	int isEmpty;
 }Pantalla;
 
-int inicializarPantalla(Pantalla* pPantalla, int limite);
-int altaPantalla(Pantalla* pPantalla, int indice);
-int modificarPantalla(Pantalla* pPantalla, int limite);
-int mostrarPantalla(Pantalla* pPantalla, int limite);
-int mostrarPantallaId(Pantalla* pPantalla, int limite);
+int pantalla_inicializar(Pantalla* pPantalla, int limite);
+int pantalla_alta(Pantalla* pPantalla, int indice);
+int pantalla_modificar(Pantalla* pPantalla, int limite);
+int pantalla_mostrar(Pantalla* pPantalla, int limite);
+int pantalla_mostrarConId(Pantalla* pPantalla, int limite);
 
-//int getPeso(Raza* pRazas, int limite, int id, int* tamanio);
-int buscarIndiceVacioPantalla(Pantalla* pPantalla, int limite);
-int buscarIdPantalla(Pantalla* pPantalla, int limite, int id);
-int buscarPantalla(Pantalla* pPantalla, int limite);
+int pantalla_buscarIndiceVacio(Pantalla* pPantalla, int limite);
+int pantalla_buscarId(Pantalla* pPantalla, int limite, int id);
+int pantalla_buscar(Pantalla* pPantalla, int limite);
 
 #endif /* PANTALLA_H_ */

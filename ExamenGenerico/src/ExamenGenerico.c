@@ -20,8 +20,8 @@
 
 int main(void)
 {
-	//Estructura arrayEstructuras[CANT_ESTRUCTURA];
-	//Estructura2 arrayEstructuras2[CANT_ESTRUCTURA2];
+	Estructura arrayEstructuras[CANT_ESTRUCTURA];
+	Estructura2 arrayEstructuras2[CANT_ESTRUCTURA2];
 	int opcionMenu;
 
 	do
@@ -32,7 +32,7 @@ int main(void)
 		{
 			case 1:
 			{
-				//altaEstructura(arrayEstructuras, arrayEstructuras2, buscarIndiceVacioEstructura(arrayEstructuras, CANT_ESTRUCTURA), CANT_ESTRUCTURA2);
+				estructura_alta(arrayEstructuras, arrayEstructuras2, estructura_buscarIndiceVacio(arrayEstructuras, CANT_ESTRUCTURA), CANT_ESTRUCTURA);
 				//alta
 				break;
 			}

@@ -24,7 +24,7 @@
  * \param int indice: La posición donde van a ser guardados los datos
  * \param int limitePant: Limite de posiciones de pantallas
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int altaContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int indice, int limitePant)
+int contratacion_alta(Contratacion* pContratacion, Pantalla* pPantalla, int indice, int limitePant)
 {
 	int retorno = -1;
 	Contratacion bufferContratacion;
@@ -32,9 +32,9 @@ int altaContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int indic
 
 	if(pContratacion != NULL && pPantalla != NULL && indice >= 0 && limitePant > 0)
 	{
-		if(buscarPantalla(pPantalla, limitePant) == 1)
+		if(pantalla_buscar(pPantalla, limitePant) == 1)
 		{
-			mostrarPantallaId(pPantalla, limitePant);
+			pantalla_mostrarConId(pPantalla, limitePant);
 			if(!utn_getNumero(&idPantalla, "Ingrese el ID de la pantalla: \n", "Error. Ese ID es inválido\n", 1, CANT_PANTALLAS, 3))
 			{
 				if(!utn_getNombre(bufferContratacion.nombreArchivo, "Ingrese el nombre del archivo:\n", "Error. Ese no es un nombre de archivo válido\n") &&
@@ -80,7 +80,7 @@ int altaContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int indic
  * \param Pantalla* pPantalla: Cadena para que se conecten los datos de una estructura con otra
  * \param int limite: Limite de posiciones de contrataciones
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int modificarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont)
+int contratacion_modificar(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont)
 {
 	int retorno = -1;
 	int id;
@@ -90,7 +90,7 @@ int modificarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int 
 
 	if(pContratacion != NULL && pPantalla != NULL && limiteCont > 0)
 	{
-		if(buscarContratacion(pContratacion, limiteCont) == 1)
+		if(contratacion_buscar(pContratacion, limiteCont) == 1)
 		{
 			if(!utn_getCuit(cuit, "Ingrese el CUIT del cliente\n", "Error. Ese CUIT es inválido\n"))
 			{
@@ -99,7 +99,7 @@ int modificarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int 
 					if(strcmp(pContratacion[i].cuitCliente, cuit) == 0)
 					{
 						flagCuit = 1;
-						indicePant = buscarIdPantalla(pPantalla, CANT_PANTALLAS, pContratacion[i].idPantalla);
+						indicePant = pantalla_buscarId(pPantalla, CANT_PANTALLAS, pContratacion[i].idPantalla);
 						printf("ID: %-10d Nombre pantalla: %-10s Tipo: %-10s Dirección: %-15s Precio: %-10f\n", pPantalla[indicePant].idPantalla, pPantalla[indicePant].nombre, pPantalla[indicePant].tipo, pPantalla[indicePant].direccion, pPantalla[indicePant].precioPorDia);
 
 						if(!utn_getNumero(&id, "Ingrese el ID de la pantalla a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PANTALLAS, 3))
@@ -150,7 +150,7 @@ int modificarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int 
  * \param Contratacion* pContratacion: Cadena donde se borrarán las contrataciones relacionadas con la pantalla escogida
  * \param int limite: Limite o tamaño de la cadena
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int bajaPantalla(Pantalla* pPantalla, Contratacion* pContratacion, int limitePant)
+int pantalla_baja(Pantalla* pPantalla, Contratacion* pContratacion, int limitePant)
 {
 	int retorno = -1;
 	int numeroId;
@@ -158,20 +158,20 @@ int bajaPantalla(Pantalla* pPantalla, Contratacion* pContratacion, int limitePan
 
 	if(pPantalla != NULL && pContratacion != NULL && limitePant > 0)
 	{
-		if(buscarPantalla(pPantalla, limitePant) == 1)
+		if(pantalla_buscar(pPantalla, limitePant) == 1)
 		{
-			mostrarPantallaId(pPantalla, limitePant);
+			pantalla_mostrarConId(pPantalla, limitePant);
 			if(!utn_getNumero(&numeroId, "Ingrese el ID de la pantalla a eliminar: \n", "Error. Ese ID no es válido\n", 1, CANT_PANTALLAS, 3))
 			{
 				for(int i = 0; i < limitePant; i++)
 				{
 					if(numeroId == pPantalla[i].idPantalla)
 					{
-						if(buscarContratacion(pContratacion, CANT_CONTRATACIONES) == 1)
+						if(contratacion_buscar(pContratacion, CANT_CONTRATACIONES) == 1)
 						{
 							for(int j = 0; j < CANT_CONTRATACIONES; j++)
 							{
-								indice = buscarIdPantalla(pPantalla, limitePant, pContratacion[j].idPantalla);
+								indice = pantalla_buscarId(pPantalla, limitePant, pContratacion[j].idPantalla);
 								if(numeroId == pContratacion[indice].idPantalla)
 								{
 									pContratacion[indice].idContratacion = 0;
@@ -217,7 +217,7 @@ int bajaPantalla(Pantalla* pPantalla, Contratacion* pContratacion, int limitePan
  * \param Contratacion* pContratacion: Cadena donde se borrarán los datos
  * \param int limiteCont: Limite de posiciones de contrataciones
  * \return Retora 0 (EXITO) o -1 (ERROR) si no*/
-int borrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont)
+int contratacion_borrar(Contratacion* pContratacion, Pantalla* pPantalla, int limiteCont)
 {
 	int retorno = -1;
 	int id;
@@ -228,7 +228,7 @@ int borrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int lim
 
 	if(pContratacion != NULL && pPantalla != NULL && limiteCont > 0)
 	{
-		if(buscarContratacion(pContratacion, limiteCont) == 1)
+		if(contratacion_buscar(pContratacion, limiteCont) == 1)
 		{
 			if(!utn_getCuit(cuit, "Ingrese el CUIT del cliente\n", "Error. Ese CUIT es inválido\n"))
 			{
@@ -237,7 +237,7 @@ int borrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int lim
 					if(strcmp(pContratacion[i].cuitCliente, cuit) == 0)
 					{
 						flagCuit = 1;
-						indicePant = buscarIdPantalla(pPantalla, CANT_PANTALLAS, pContratacion[i].idPantalla);
+						indicePant = pantalla_buscarId(pPantalla, CANT_PANTALLAS, pContratacion[i].idPantalla);
 						printf("ID: %-10d Nombre pantalla: %-10s Tipo: %-10s Dirección: %-15s Precio: %-10f\n", pPantalla[indicePant].idPantalla, pPantalla[indicePant].nombre, pPantalla[indicePant].tipo, pPantalla[indicePant].direccion, pPantalla[indicePant].precioPorDia);
 
 						if(!utn_getNumero(&id, "Ingrese el ID de la pantalla a modificar\n", "Error. Ese ID no existe\n", 1, CANT_PANTALLAS, 3))
@@ -293,7 +293,7 @@ int consultaFacturacion(Contratacion* pContratacion, Pantalla* pPantalla, int li
 
 	if(pContratacion != NULL && pPantalla != NULL && limiteCont > 0)
 	{
-		if(buscarContratacion(pContratacion, limiteCont) == 1)
+		if(contratacion_buscar(pContratacion, limiteCont) == 1)
 		{
 			if(!utn_getCuit(cuit, "Ingrese el CUIT del cliente\n", "Error. Ese CUIT es inválido\n"))
 			{
@@ -302,7 +302,7 @@ int consultaFacturacion(Contratacion* pContratacion, Pantalla* pPantalla, int li
 					if(strcmp(pContratacion[i].cuitCliente, cuit) == 0)
 					{
 						flagCuit = 1;
-						indicePant = buscarIdPantalla(pPantalla, CANT_PANTALLAS, pContratacion[i].idPantalla);
+						indicePant = pantalla_buscarId(pPantalla, CANT_PANTALLAS, pContratacion[i].idPantalla);
 						printf("Nombre archivo: %-10s Precio por día: %-10.2f\n", pContratacion[i].nombreArchivo, pPantalla[indicePant].precioPorDia);
 					}
 				}
@@ -327,7 +327,7 @@ int consultaFacturacion(Contratacion* pContratacion, Pantalla* pPantalla, int li
  * \param Pantalla* pPantalla: Cadena que sirve solo para mostrar el nombre de la pantalla que está en otra estructura
  * \param int limite: Limite o tamaño de la cadena pContratacion
  * \return Retora 0 (EXITO) o -1 (ERROR)*/
-int mostrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int limite)
+int contratacion_mostrar(Contratacion* pContratacion, Pantalla* pPantalla, int limite)
 {
 	int retorno = -1;
 	int indicePant;
@@ -336,7 +336,7 @@ int mostrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int li
 	{
 		for(int i = 0; i < limite; i++)
 		{
-			indicePant = buscarIdPantalla(pPantalla, limite, pContratacion[i].idPantalla);
+			indicePant = pantalla_buscarId(pPantalla, limite, pContratacion[i].idPantalla);
 			if(!pContratacion[i].isEmpty)
 			{
 				printf("Nombre pantalla: %-10s Nombre archivo: %-10s Cantidad días: %-10d CUIT: %-15s\n", pPantalla[indicePant].nombre, pContratacion[i].nombreArchivo, pContratacion[i].cantDias, pContratacion[i].cuitCliente);
@@ -354,7 +354,7 @@ int mostrarContratacion(Contratacion* pContratacion, Pantalla* pPantalla, int li
  * \param Pantalla* pPantalla: Cadena que sirve solo para mostrar el nombre de la pantalla que está en otra estructura
  * \param int limite: Limite o tamaño de la cadena pContratacion
  * \return Retora 0 (EXITO) o -1 (ERROR)*/
-int mostrarContratacionId(Contratacion* pContratacion, Pantalla* pPantalla, int limite)
+int contratacion_mostrarId(Contratacion* pContratacion, Pantalla* pPantalla, int limite)
 {
 	int retorno = -1;
 
@@ -379,7 +379,7 @@ int mostrarContratacionId(Contratacion* pContratacion, Pantalla* pPantalla, int 
  * \param int limite: Limite o tamaño de la cadena
  * \param int id: ID que va a ser comparado con el ID de Pantalla
  * \return Retora la posición donde los IDs sean iguales o -1 en caso de error*/
-int buscarIdContratacion(Contratacion* pContratacion, int limite, int id)
+int contratacion_buscarId(Contratacion* pContratacion, int limite, int id)
 {
 	int retorno = -1;
 
