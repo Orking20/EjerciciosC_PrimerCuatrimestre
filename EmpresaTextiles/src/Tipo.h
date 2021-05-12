@@ -28,4 +28,16 @@ int Tipo_buscarPorId(Tipo* pTipo, int limite, int id);
 int Tipo_buscar(Tipo* pTipo, int limite);
 int ordenarPorNumero(Tipo* pTipo, int limite);
 
+//Setters
+int producto_setIdTipo(Producto* this, int idTipo);
+int producto_setIdMarca(Producto* this, int idProducto);
+int producto_setFabrica(Producto* this, char* descripcion);
+int producto_setTipoDeTela(Producto* this, float precioPorUnidad);
+
+//Getters
+int producto_getIdTipo(Producto* this, int* flagError);
+char* producto_getIdMarca(Producto* this, int* flagError);
+char* producto_getFabrica(Producto* this, int* flagError);
+char* producto_getTipoDeTela(Producto* this, int* flagError);
+
 #endif /* TIPO_H_ */

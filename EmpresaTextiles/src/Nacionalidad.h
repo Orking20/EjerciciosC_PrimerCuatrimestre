@@ -26,4 +26,12 @@ int Nacionalidad_buscarIndiceVacio(Nacionalidad* pNacionalidad, int limite);
 int Nacionalidad_buscarPorId(Nacionalidad* pNacionalidad, int limite, int id);
 int Nacionalidad_buscar(Nacionalidad* pNacionalidad, int limite);
 
+//Setters
+int nacionalidad_setIdNacionalidad(Nacionalidad* this, int idNacionalidad);
+int nacionalidad_setDescripcion(Nacionalidad* this, char* descripcion);
+
+//Getters
+int nacionalidad_getIdNacionalidad(Nacionalidad* this, int* flagError);
+char* nacionalidad_getDescripcion(Nacionalidad* this, int* flagError);
+
 #endif /* Nacionalidad_H_ */
