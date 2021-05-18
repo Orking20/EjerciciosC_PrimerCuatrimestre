@@ -10,22 +10,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 #include "Nacionalidad.h"
 #include "utn.h"
 #include "Producto.h"
-#include "Relacion.h"
+#include "Nacionalidad.h"
+#include "Tipo.h"
 #define CANT_PRODUCTO 100
 #define CANT_NACIONALIDAD 100
 
 int main(void)
 {
 	int opcionMenu;
-	Producto arrayProducto[CANT_PRODUCTO];
-	Nacionalidad arrayNacionalidad[CANT_NACIONALIDAD];
+	Producto* auxProducto[CANT_PRODUCTO];
 
-	Producto_inicializar(arrayProducto, CANT_PRODUCTO);
-	Nacionalidad_inicializar(arrayNacionalidad, CANT_NACIONALIDAD);
+	producto_inicializar(auxProducto, CANT_PRODUCTO);
 
 	do
 	{
@@ -34,40 +33,41 @@ int main(void)
 									"3) Modificar producto\n"
 									"4) Listado productos\n"
 									"5) Listado ordenado por precio\n"
-									"6) Listado ordenado por descripción\n",
+									"6) Listado ordenado por descripción\n"
+									"0) Salir",
 									"\nError. Elija una de las opciónes del menú escribiendo el número correspondiente", 0, 6, 3);
 
 		switch(opcionMenu)
 		{
 			case 1:
 			{
-				Producto_alta(arrayProducto, arrayNacionalidad, CANT_PRODUCTO, CANT_NACIONALIDAD, Producto_buscarIndiceVacio(arrayProducto, CANT_PRODUCTO));
+				producto_alta(auxProducto, CANT_PRODUCTO);
 				break;
 			}
 			case 2:
 			{
-				Producto_modificar(arrayProducto, arrayNacionalidad, CANT_PRODUCTO, CANT_NACIONALIDAD);
-
+				producto_baja(auxProducto, CANT_PRODUCTO);
 				break;
 			}
 			case 3:
 			{
-				Producto_baja(arrayProducto, arrayNacionalidad, CANT_PRODUCTO, CANT_NACIONALIDAD);
+				producto_modificar(auxProducto, CANT_PRODUCTO);
 				break;
 			}
 			case 4:
 			{
-				Nacionalidad_alta(arrayNacionalidad, Nacionalidad_buscarIndiceVacio(arrayNacionalidad, CANT_NACIONALIDAD));
+				producto_ordenarPorId(auxProducto, CANT_PRODUCTO);
+				producto_listado(auxProducto, CANT_PRODUCTO);
 				break;
 			}
 			case 5:
 			{
-				Nacionalidad_modificar(arrayNacionalidad, CANT_NACIONALIDAD);
+				producto_ordenarPorPrecio(auxProducto, CANT_PRODUCTO);
 				break;
 			}
 			case 6:
 			{
-				Nacionalidad_baja(arrayNacionalidad, arrayProducto, CANT_NACIONALIDAD, CANT_PRODUCTO);
+				producto_ordenarPorDescripcion(auxProducto, CANT_PRODUCTO);
 				break;
 			}
 		}

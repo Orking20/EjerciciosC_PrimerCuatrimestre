@@ -1,140 +1,139 @@
-21:20:09 **** Build of configuration Debug for project EmpresaTextiles ****
+17:33:03 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
-Building file: ../src/EmpresaTextiles.c
+Building file: ../src/ArrayEmployees.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpresaTextiles.d" -MT"src/EmpresaTextiles.o" -o "src/EmpresaTextiles.o" "../src/EmpresaTextiles.c"
-Finished building: ../src/EmpresaTextiles.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+Finished building: ../src/ArrayEmployees.c
  
-Building file: ../src/Entidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entidad.d" -MT"src/Entidad.o" -o "src/Entidad.o" "../src/Entidad.c"
-Finished building: ../src/Entidad.c
- 
-Building file: ../src/Estructura.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Estructura.d" -MT"src/Estructura.o" -o "src/Estructura.o" "../src/Estructura.c"
-Finished building: ../src/Estructura.c
- 
-Building file: ../src/Relacion.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Relacion.d" -MT"src/Relacion.o" -o "src/Relacion.o" "../src/Relacion.c"
-Finished building: ../src/Relacion.c
- 
-Building file: ../src/utn.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
-Finished building: ../src/utn.c
- 
-Building target: EmpresaTextiles
+Building target: TrabajoPractico2
 Invoking: GCC C Linker
-gcc  -o "EmpresaTextiles"  ./src/EmpresaTextiles.o ./src/Entidad.o ./src/Estructura.o ./src/Relacion.o ./src/utn.o   
-Finished building target: EmpresaTextiles
+gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
+Finished building target: TrabajoPractico2
  
-21:20:12 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+17:33:06 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
 make: No se hace nada para 'all'.
-21:27:20 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+17:56:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
-Building file: ../src/EmpresaTextiles.c
+Building file: ../src/ArrayEmployees.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpresaTextiles.d" -MT"src/EmpresaTextiles.o" -o "src/EmpresaTextiles.o" "../src/EmpresaTextiles.c"
-Finished building: ../src/EmpresaTextiles.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+Finished building: ../src/ArrayEmployees.c
  
-Building file: ../src/Entidad.c
+Building file: ../src/Reports.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entidad.d" -MT"src/Entidad.o" -o "src/Entidad.o" "../src/Entidad.c"
-Finished building: ../src/Entidad.c
- 
-Building file: ../src/Producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
-../src/Producto.c: In function ‘Producto_modificar’:
-../src/Producto.c:99:3: warning: implicit declaration of function ‘Producto_mostrarConId’; did you mean ‘Producto_mostrarId’? [-Wimplicit-function-declaration]
-   Producto_mostrarConId(pProducto, limite);
-   ^~~~~~~~~~~~~~~~~~~~~
-   Producto_mostrarId
-Finished building: ../src/Producto.c
- 
-Building file: ../src/Relacion.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Relacion.d" -MT"src/Relacion.o" -o "src/Relacion.o" "../src/Relacion.c"
-In file included from ../src/Relacion.c:13:
-../src/Relacion.h:11:19: error: unknown type name ‘Producto’
- int Producto_alta(Producto* pProducto, Entidad* pEntidad, int limiteProducto, int limiteEntidad, int indice);
-                   ^~~~~~~~
-../src/Relacion.h:12:24: error: unknown type name ‘Producto’
- int Producto_modificar(Producto* pProducto, Entidad* pEntidad, int limiteProducto, int limiteEntidad);
-                        ^~~~~~~~
-../src/Relacion.h:13:37: error: unknown type name ‘Producto’
- int entidad_baja(Entidad* pEntidad, Producto* pProducto, int limiteEntidad, int limiteProducto);
-                                     ^~~~~~~~
-../src/Relacion.h:14:19: error: unknown type name ‘Producto’
- int Producto_baja(Producto* pProducto, Entidad* pEntidad, int limiteProducto, int limiteEntidad);
-                   ^~~~~~~~
-../src/Relacion.h:15:22: error: unknown type name ‘Producto’
- int Producto_mostrar(Producto* pProducto, Entidad* pEntidad, int limiteProducto, int limiteEntidad);
-                      ^~~~~~~~
-make: *** [src/subdir.mk:32: src/Relacion.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
+../src/Reports.c: In function ‘report’:
+../src/Reports.c:34:4: error: too few arguments to function ‘sortEmployeesByLastName’
+    sortEmployeesByLastName(pEmployee, length);
+    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/Reports.c:14:12: note: declared here
+ static int sortEmployeesByLastName(Employee* pEmployee, int length, int* order);
+            ^~~~~~~~~~~~~~~~~~~~~~~
+../src/Reports.c:35:4: error: too few arguments to function ‘sortEmployeesBySector’
+    sortEmployeesBySector(pEmployee, length);
+    ^~~~~~~~~~~~~~~~~~~~~
+../src/Reports.c:15:12: note: declared here
+ static int sortEmployeesBySector(Employee* pEmployee, int length, int* order);
+            ^~~~~~~~~~~~~~~~~~~~~
+../src/Reports.c: In function ‘sortEmployeesByLastName’:
+../src/Reports.c:65:12: error: switch quantity not an integer
+     switch(order)
+            ^~~~~
+../src/Reports.c: In function ‘sortEmployeesBySector’:
+../src/Reports.c:119:12: error: switch quantity not an integer
+     switch(order)
+            ^~~~~
+make: *** [src/subdir.mk:29: src/Reports.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-21:29:11 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+17:57:15 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
-Building file: ../src/EmpresaTextiles.c
+Building file: ../src/Reports.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpresaTextiles.d" -MT"src/EmpresaTextiles.o" -o "src/EmpresaTextiles.o" "../src/EmpresaTextiles.c"
-Finished building: ../src/EmpresaTextiles.c
- 
-Building file: ../src/Producto.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Producto.d" -MT"src/Producto.o" -o "src/Producto.o" "../src/Producto.c"
-Finished building: ../src/Producto.c
- 
-Building file: ../src/Relacion.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Relacion.d" -MT"src/Relacion.o" -o "src/Relacion.o" "../src/Relacion.c"
-Finished building: ../src/Relacion.c
- 
-Building file: ../src/utn.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
-Finished building: ../src/utn.c
- 
-Building target: EmpresaTextiles
-Invoking: GCC C Linker
-gcc  -o "EmpresaTextiles"  ./src/EmpresaTextiles.o ./src/Entidad.o ./src/Producto.o ./src/Relacion.o ./src/utn.o   
-/usr/bin/ld: ./src/Relacion.o: en la función `Producto_alta':
-/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/EmpresaTextiles/Debug/../src/Relacion.c:25: definiciones múltiples de `Producto_alta'; ./src/Producto.o:/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/EmpresaTextiles/Debug/../src/Producto.c:63: primero se definió aquí
-/usr/bin/ld: ./src/Relacion.o: en la función `Producto_modificar':
-/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/EmpresaTextiles/Debug/../src/Relacion.c:81: definiciones múltiples de `Producto_modificar'; ./src/Producto.o:/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/EmpresaTextiles/Debug/../src/Producto.c:92: primero se definió aquí
-collect2: error: ld returned 1 exit status
-make: *** [makefile:43: EmpresaTextiles] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
+../src/Reports.c: In function ‘report’:
+../src/Reports.c:34:47: warning: passing argument 3 of ‘sortEmployeesByLastName’ makes pointer from integer without a cast [-Wint-conversion]
+    sortEmployeesByLastName(pEmployee, length, order);
+                                               ^~~~~
+../src/Reports.c:14:74: note: expected ‘int *’ but argument is of type ‘int’
+ static int sortEmployeesByLastName(Employee* pEmployee, int length, int* order);
+                                                                     ~~~~~^~~~~
+../src/Reports.c:35:45: warning: passing argument 3 of ‘sortEmployeesBySector’ makes pointer from integer without a cast [-Wint-conversion]
+    sortEmployeesBySector(pEmployee, length, order);
+                                             ^~~~~
+../src/Reports.c:15:72: note: expected ‘int *’ but argument is of type ‘int’
+ static int sortEmployeesBySector(Employee* pEmployee, int length, int* order);
+                                                                   ~~~~~^~~~~
+../src/Reports.c: In function ‘sortEmployeesByLastName’:
+../src/Reports.c:65:12: error: switch quantity not an integer
+     switch(order)
+            ^~~~~
+../src/Reports.c: In function ‘sortEmployeesBySector’:
+../src/Reports.c:119:12: error: switch quantity not an integer
+     switch(order)
+            ^~~~~
+make: *** [src/subdir.mk:29: src/Reports.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-21:30:18 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+17:57:23 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
-Building file: ../src/Relacion.c
+Building file: ../src/Reports.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Relacion.d" -MT"src/Relacion.o" -o "src/Relacion.o" "../src/Relacion.c"
-Finished building: ../src/Relacion.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
+../src/Reports.c: In function ‘sortEmployeesByLastName’:
+../src/Reports.c:65:12: error: switch quantity not an integer
+     switch(order)
+            ^~~~~
+../src/Reports.c: In function ‘sortEmployeesBySector’:
+../src/Reports.c:119:12: error: switch quantity not an integer
+     switch(order)
+            ^~~~~
+make: *** [src/subdir.mk:29: src/Reports.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:57:38 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+make all 
+Building file: ../src/Reports.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
+Finished building: ../src/Reports.c
  
-Building target: EmpresaTextiles
+Building target: TrabajoPractico2
 Invoking: GCC C Linker
-gcc  -o "EmpresaTextiles"  ./src/EmpresaTextiles.o ./src/Entidad.o ./src/Producto.o ./src/Relacion.o ./src/utn.o   
-Finished building target: EmpresaTextiles
+gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
+Finished building target: TrabajoPractico2
  
-21:30:19 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+17:57:39 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
 make: No se hace nada para 'all'.
-21:32:22 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+18:00:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
-Building file: ../src/EmpresaTextiles.c
+Building file: ../src/Reports.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpresaTextiles.d" -MT"src/EmpresaTextiles.o" -o "src/EmpresaTextiles.o" "../src/EmpresaTextiles.c"
-Finished building: ../src/EmpresaTextiles.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
+Finished building: ../src/Reports.c
  
-Building target: EmpresaTextiles
+Building target: TrabajoPractico2
 Invoking: GCC C Linker
-gcc  -o "EmpresaTextiles"  ./src/EmpresaTextiles.o ./src/Entidad.o ./src/Producto.o ./src/Relacion.o ./src/utn.o   
-Finished building target: EmpresaTextiles
+gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
+Finished building target: TrabajoPractico2
  
-21:32:23 **** Incremental Build of configuration Debug for project EmpresaTextiles ****
+18:00:57 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+make all 
+make: No se hace nada para 'all'.
+18:01:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+make all 
+make: No se hace nada para 'all'.
+18:03:12 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+make all 
+Building file: ../src/Reports.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
+Finished building: ../src/Reports.c
+ 
+Building target: TrabajoPractico2
+Invoking: GCC C Linker
+gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
+Finished building target: TrabajoPractico2
+ 
+18:03:13 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 make all 
 make: No se hace nada para 'all'.

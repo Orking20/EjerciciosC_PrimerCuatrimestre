@@ -15,29 +15,23 @@ typedef struct
 	char Marca[TAM_CADENA];
 	char Fabrica[TAM_CADENA];
 	char TipoDeTela[TAM_CADENA];
-	int isEmpty;
 }Tipo;
 
-int Tipo_inicializar(Tipo* pTipo, int limite);
-
-void Tipo_harcodeo(Tipo* pTipo, int limite);
-
-int Tipo_mostrarId(Tipo* pTipo, int limite);
-int Tipo_buscarIndiceVacio(Tipo* pTipo, int limite);
-int Tipo_buscarPorId(Tipo* pTipo, int limite, int id);
-int Tipo_buscar(Tipo* pTipo, int limite);
-int ordenarPorNumero(Tipo* pTipo, int limite);
+//Memoria dinámica
+Tipo* tipo_new(void);
+Tipo* tipo_newParam(int idTipo, char* marca, char* fabrica, char* tipoDeTela);
+int tipo_delete(Tipo* this);
 
 //Setters
-int producto_setIdTipo(Producto* this, int idTipo);
-int producto_setIdMarca(Producto* this, int idProducto);
-int producto_setFabrica(Producto* this, char* descripcion);
-int producto_setTipoDeTela(Producto* this, float precioPorUnidad);
+int tipo_setIdTipo(Tipo* this, int idTipo);
+int tipo_setIdMarca(Tipo* this, int idTipo);
+int tipo_setFabrica(Tipo* this, char* descripcion);
+int tipo_setTipoDeTela(Tipo* this, float precioPorUnidad);
 
 //Getters
-int producto_getIdTipo(Producto* this, int* flagError);
-char* producto_getIdMarca(Producto* this, int* flagError);
-char* producto_getFabrica(Producto* this, int* flagError);
-char* producto_getTipoDeTela(Producto* this, int* flagError);
+int tipo_getIdTipo(Tipo* this, int* flagError);
+char* tipo_getIdMarca(Tipo* this, int* flagError);
+char* tipo_getFabrica(Tipo* this, int* flagError);
+char* tipo_getTipoDeTela(Tipo* this, int* flagError);
 
 #endif /* TIPO_H_ */
