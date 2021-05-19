@@ -1,0 +1,12 @@
+Camilo,Fernandez,16542235
+Julio,Marona,16450254
+Mariano,Leuda,16205648
+Claudia,Cerrante,18584592
+Miguel,Paredes,21245210
+Gonzalo,Mora,22214560
+Marta,Faiella,16587456
+Camila,Flores,20250143
+Micaela,Zamudio,21254414
+Carolina,Sanchez,18548542
+Carlos,Dominguez,12423154
+Juan,Perez,23542125

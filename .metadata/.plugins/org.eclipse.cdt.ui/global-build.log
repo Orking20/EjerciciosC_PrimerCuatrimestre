@@ -1,139 +1,290 @@
-17:33:03 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+15:43:43 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
-Building file: ../src/ArrayEmployees.c
+Building file: ../src/Empleado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
  
-Building target: TrabajoPractico2
+Building target: EmpleadosArchivos
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
-Finished building target: TrabajoPractico2
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
  
-17:33:06 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+15:43:47 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
 make: No se hace nada para 'all'.
-17:56:58 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+15:45:24 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
-Building file: ../src/ArrayEmployees.c
+Building file: ../src/Empleado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
  
-Building file: ../src/Reports.c
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+15:45:25 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+16:07:01 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
-../src/Reports.c: In function ‘report’:
-../src/Reports.c:34:4: error: too few arguments to function ‘sortEmployeesByLastName’
-    sortEmployeesByLastName(pEmployee, length);
-    ^~~~~~~~~~~~~~~~~~~~~~~
-../src/Reports.c:14:12: note: declared here
- static int sortEmployeesByLastName(Employee* pEmployee, int length, int* order);
-            ^~~~~~~~~~~~~~~~~~~~~~~
-../src/Reports.c:35:4: error: too few arguments to function ‘sortEmployeesBySector’
-    sortEmployeesBySector(pEmployee, length);
-    ^~~~~~~~~~~~~~~~~~~~~
-../src/Reports.c:15:12: note: declared here
- static int sortEmployeesBySector(Employee* pEmployee, int length, int* order);
-            ^~~~~~~~~~~~~~~~~~~~~
-../src/Reports.c: In function ‘sortEmployeesByLastName’:
-../src/Reports.c:65:12: error: switch quantity not an integer
-     switch(order)
-            ^~~~~
-../src/Reports.c: In function ‘sortEmployeesBySector’:
-../src/Reports.c:119:12: error: switch quantity not an integer
-     switch(order)
-            ^~~~~
-make: *** [src/subdir.mk:29: src/Reports.o] Error 1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+16:07:02 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+16:31:24 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+16:31:45 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+16:32:08 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+16:32:51 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+16:33:11 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+16:56:30 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+17:09:28 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+../src/Empleado.c: In function ‘empleado_newParametro’:
+../src/Empleado.c:38:6: warning: implicit declaration of function ‘empleado_setnombre’; did you mean ‘empleado_setNombre’? [-Wimplicit-function-declaration]
+      empleado_setnombre(auxEmpleado, nombre) < 0 ||
+      ^~~~~~~~~~~~~~~~~~
+      empleado_setNombre
+../src/Empleado.c:39:6: warning: implicit declaration of function ‘empleado_setapellido’; did you mean ‘empleado_setApellido’? [-Wimplicit-function-declaration]
+      empleado_setapellido(auxEmpleado, apellido) < 0 ||
+      ^~~~~~~~~~~~~~~~~~~~
+      empleado_setApellido
+../src/Empleado.c:40:6: warning: implicit declaration of function ‘empleado_setdni’; did you mean ‘empleado_setDni’? [-Wimplicit-function-declaration]
+      empleado_setdni(auxEmpleado, dni) < 0)
+      ^~~~~~~~~~~~~~~
+      empleado_setDni
+../src/Empleado.c: In function ‘empleado_setnombre’:
+../src/Empleado.c:418:21: warning: implicit declaration of function ‘isValidnombre’; did you mean ‘isValidNombre’? [-Wimplicit-function-declaration]
+  if(this != NULL && isValidnombre(nombre))
+                     ^~~~~~~~~~~~~
+                     isValidNombre
+../src/Empleado.c: In function ‘empleado_setapellido’:
+../src/Empleado.c:436:21: warning: implicit declaration of function ‘isValidapellido’; did you mean ‘isValidApellido’? [-Wimplicit-function-declaration]
+  if(this != NULL && isValidapellido(apellido))
+                     ^~~~~~~~~~~~~~~
+                     isValidApellido
+Finished building: ../src/Empleado.c
+ 
+Building file: ../src/EmpleadosArchivos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpleadosArchivos.d" -MT"src/EmpleadosArchivos.o" -o "src/EmpleadosArchivos.o" "../src/EmpleadosArchivos.c"
+Finished building: ../src/EmpleadosArchivos.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+17:10:20 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+../src/Empleado.c: In function ‘empleado_setNombre’:
+../src/Empleado.c:418:21: warning: implicit declaration of function ‘isValidnombre’; did you mean ‘isValidNombre’? [-Wimplicit-function-declaration]
+  if(this != NULL && isValidnombre(nombre))
+                     ^~~~~~~~~~~~~
+                     isValidNombre
+../src/Empleado.c: In function ‘empleado_setApellido’:
+../src/Empleado.c:436:21: warning: implicit declaration of function ‘isValidapellido’; did you mean ‘isValidApellido’? [-Wimplicit-function-declaration]
+  if(this != NULL && isValidapellido(apellido))
+                     ^~~~~~~~~~~~~~~
+                     isValidApellido
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+17:11:14 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+17:11:14 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+17:11:30 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/EmpleadosArchivos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpleadosArchivos.d" -MT"src/EmpleadosArchivos.o" -o "src/EmpleadosArchivos.o" "../src/EmpleadosArchivos.c"
+../src/EmpleadosArchivos.c: In function ‘main’:
+../src/EmpleadosArchivos.c:67:5: warning: implicit declaration of function ‘empleado_ordenarPorDescripcion’; did you mean ‘empleado_ordenarPornombre’? [-Wimplicit-function-declaration]
+     empleado_ordenarPorDescripcion(auxEmpleado, CANT_EMPLEADO);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     empleado_ordenarPornombre
+Finished building: ../src/EmpleadosArchivos.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+/usr/bin/ld: ./src/EmpleadosArchivos.o: en la función `main':
+/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/EmpleadosArchivos/Debug/../src/EmpleadosArchivos.c:67: referencia a `empleado_ordenarPorDescripcion' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: EmpleadosArchivos] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-17:57:15 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+17:11:30 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
-Building file: ../src/Reports.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
-../src/Reports.c: In function ‘report’:
-../src/Reports.c:34:47: warning: passing argument 3 of ‘sortEmployeesByLastName’ makes pointer from integer without a cast [-Wint-conversion]
-    sortEmployeesByLastName(pEmployee, length, order);
-                                               ^~~~~
-../src/Reports.c:14:74: note: expected ‘int *’ but argument is of type ‘int’
- static int sortEmployeesByLastName(Employee* pEmployee, int length, int* order);
-                                                                     ~~~~~^~~~~
-../src/Reports.c:35:45: warning: passing argument 3 of ‘sortEmployeesBySector’ makes pointer from integer without a cast [-Wint-conversion]
-    sortEmployeesBySector(pEmployee, length, order);
-                                             ^~~~~
-../src/Reports.c:15:72: note: expected ‘int *’ but argument is of type ‘int’
- static int sortEmployeesBySector(Employee* pEmployee, int length, int* order);
-                                                                   ~~~~~^~~~~
-../src/Reports.c: In function ‘sortEmployeesByLastName’:
-../src/Reports.c:65:12: error: switch quantity not an integer
-     switch(order)
-            ^~~~~
-../src/Reports.c: In function ‘sortEmployeesBySector’:
-../src/Reports.c:119:12: error: switch quantity not an integer
-     switch(order)
-            ^~~~~
-make: *** [src/subdir.mk:29: src/Reports.o] Error 1
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+/usr/bin/ld: ./src/EmpleadosArchivos.o: en la función `main':
+/home/mateo/UTN/ProgramacionLaboratorio/Ejercicios/EmpleadosArchivos/Debug/../src/EmpleadosArchivos.c:67: referencia a `empleado_ordenarPorDescripcion' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: EmpleadosArchivos] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-17:57:23 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+17:12:21 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
-Building file: ../src/Reports.c
+Building file: ../src/Empleado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
-../src/Reports.c: In function ‘sortEmployeesByLastName’:
-../src/Reports.c:65:12: error: switch quantity not an integer
-     switch(order)
-            ^~~~~
-../src/Reports.c: In function ‘sortEmployeesBySector’:
-../src/Reports.c:119:12: error: switch quantity not an integer
-     switch(order)
-            ^~~~~
-make: *** [src/subdir.mk:29: src/Reports.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-17:57:38 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
-make all 
-Building file: ../src/Reports.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
-Finished building: ../src/Reports.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
  
-Building target: TrabajoPractico2
+Building file: ../src/EmpleadosArchivos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EmpleadosArchivos.d" -MT"src/EmpleadosArchivos.o" -o "src/EmpleadosArchivos.o" "../src/EmpleadosArchivos.c"
+Finished building: ../src/EmpleadosArchivos.c
+ 
+Building target: EmpleadosArchivos
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
-Finished building target: TrabajoPractico2
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
  
-17:57:39 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+17:12:22 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
 make: No se hace nada para 'all'.
-18:00:56 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+17:13:49 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
-Building file: ../src/Reports.c
+Building file: ../src/Empleado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
-Finished building: ../src/Reports.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+../src/Empleado.c: In function ‘empleado_ordenarPorNombre’:
+../src/Empleado.c:284:15: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     if(nombre1, nombre2 < 0)
+               ^
+Finished building: ../src/Empleado.c
  
-Building target: TrabajoPractico2
+Building target: EmpleadosArchivos
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
-Finished building target: TrabajoPractico2
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
  
-18:00:57 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+17:14:06 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
-make: No se hace nada para 'all'.
-18:01:04 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
-make all 
-make: No se hace nada para 'all'.
-18:03:12 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
-make all 
-Building file: ../src/Reports.c
+Building file: ../src/Empleado.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Reports.d" -MT"src/Reports.o" -o "src/Reports.o" "../src/Reports.c"
-Finished building: ../src/Reports.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
  
-Building target: TrabajoPractico2
+Building target: EmpleadosArchivos
 Invoking: GCC C Linker
-gcc  -o "TrabajoPractico2"  ./src/ArrayEmployees.o ./src/Reports.o ./src/main.o ./src/utn.o   
-Finished building target: TrabajoPractico2
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
  
-18:03:13 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+17:14:07 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
 make all 
 make: No se hace nada para 'all'.
+17:14:44 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+17:14:54 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+17:16:41 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+17:16:41 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+17:16:48 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+17:17:53 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
+17:17:55 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+make: No se hace nada para 'all'.
+17:18:01 **** Incremental Build of configuration Debug for project EmpleadosArchivos ****
+make all 
+Building file: ../src/Empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Empleado.d" -MT"src/Empleado.o" -o "src/Empleado.o" "../src/Empleado.c"
+Finished building: ../src/Empleado.c
+ 
+Building target: EmpleadosArchivos
+Invoking: GCC C Linker
+gcc  -o "EmpleadosArchivos"  ./src/Empleado.o ./src/EmpleadosArchivos.o ./src/utn.o   
+Finished building target: EmpleadosArchivos
+ 
